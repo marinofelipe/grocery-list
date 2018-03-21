@@ -11,12 +11,13 @@ import Foundation
 class Fastfile: LaneFile {
     func testLane() {
         desc("Build project tests and generate coverage report")
-        cocoapods(
-            clean: true,
-            podfile: "Podfile"
-        )
+//        cocoapods(
+//            clean: true,
+//            podfile: "Podfile"
+//        )
         scan(
-            workspace: "GroceryList.xcworkspace",
+//            workspace: "GroceryList.xcworkspace",
+            project: "GroceryList.xcodeproj",
             scheme: "GroceryList"
         )
         slather(

@@ -15,6 +15,7 @@
 		D53D58EC205DEB4F0084E3AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D53D58EA205DEB4F0084E3AA /* LaunchScreen.storyboard */; };
 		D53D58F7205DEB500084E3AA /* GroceryListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53D58F6205DEB500084E3AA /* GroceryListTests.swift */; };
 		D53D5902205DEB500084E3AA /* GroceryListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53D5901205DEB500084E3AA /* GroceryListUITests.swift */; };
+		D5EE0999205F474700E58E76 /* ideas in Resources */ = {isa = PBXBuildFile; fileRef = D5EE0998205F474700E58E76 /* ideas */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		D53D58FD205DEB500084E3AA /* GroceryListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GroceryListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D53D5901205DEB500084E3AA /* GroceryListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryListUITests.swift; sourceTree = "<group>"; };
 		D53D5903205DEB500084E3AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5EE0998205F474700E58E76 /* ideas */ = {isa = PBXFileReference; lastKnownFileType = text; path = ideas; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +101,16 @@
 		D53D58DE205DEB4F0084E3AA /* GroceryList */ = {
 			isa = PBXGroup;
 			children = (
+				D5EE0997205E048500E58E76 /* Views */,
+				D5EE0996205E047D00E58E76 /* ViewModels */,
+				D5EE0995205E046A00E58E76 /* ViewControllers */,
+				D5EE0994205E046400E58E76 /* Utils */,
+				D5EE0993205E045D00E58E76 /* Services */,
+				D5EE0992205E045900E58E76 /* Models */,
+				D5EE0991205E035600E58E76 /* Entities */,
+				D5EE0990205E034A00E58E76 /* Extensions */,
 				D53D58DF205DEB4F0084E3AA /* AppDelegate.swift */,
+				D5EE0998205F474700E58E76 /* ideas */,
 				D53D58E1205DEB4F0084E3AA /* FirstViewController.swift */,
 				D53D58E3205DEB4F0084E3AA /* SecondViewController.swift */,
 				D53D58E5205DEB4F0084E3AA /* Main.storyboard */,
@@ -126,6 +137,62 @@
 				D53D5903205DEB500084E3AA /* Info.plist */,
 			);
 			path = GroceryListUITests;
+			sourceTree = "<group>";
+		};
+		D5EE0990205E034A00E58E76 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D5EE0991205E035600E58E76 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		D5EE0992205E045900E58E76 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D5EE0993205E045D00E58E76 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D5EE0994205E046400E58E76 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		D5EE0995205E046A00E58E76 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D5EE0996205E047D00E58E76 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D5EE0997205E048500E58E76 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +305,7 @@
 				D53D58EC205DEB4F0084E3AA /* LaunchScreen.storyboard in Resources */,
 				D53D58E9205DEB4F0084E3AA /* Assets.xcassets in Resources */,
 				D53D58E7205DEB4F0084E3AA /* Main.storyboard in Resources */,
+				D5EE0999205F474700E58E76 /* ideas in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
