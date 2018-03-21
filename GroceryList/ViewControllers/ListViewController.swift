@@ -60,6 +60,18 @@ extension ListViewController: UICollectionViewDataSource {
 extension ListViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        guard let cell = collectionView.cellForItem(at: indexPath) else {
+            return
+        }
+        
+        let cellFrameOnView = view.convert(cell.frame, from: cell)
+        
+        
+        //add subview animating from frame
+        
+        
+        
         print("selected item: \(viewModel.items![indexPath.item])")
     }
 }
