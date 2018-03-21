@@ -1,0 +1,10 @@
+// selecting a row will animate price subview
+    // animate text field from row frame
+
+// while receiving input the price text will format content as currency
+
+// price text filed will appear as subview of the collection view or main view
+// will be a nice looking text field waiting for the user to input value
+
+// clicking outside the price text field would dismiss it
+// clicking ok in the keyboard would confirm the value and add the row to the bought section
