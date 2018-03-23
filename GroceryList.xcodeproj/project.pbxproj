@@ -25,6 +25,7 @@
 		D5EE09BE206210BE00E58E76 /* CurrencyUITextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5EE09A9206210BD00E58E76 /* CurrencyUITextField.framework */; };
 		D5EE09BF206210BE00E58E76 /* CurrencyUITextField.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D5EE09A9206210BD00E58E76 /* CurrencyUITextField.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D5EE09C8206213B900E58E76 /* CurrencyUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EE09C7206213B900E58E76 /* CurrencyUITextField.swift */; };
+		D5EE09CA2064AEB000E58E76 /* CurencySymbolType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EE09C92064AEB000E58E76 /* CurencySymbolType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,7 @@
 		D5EE09B8206210BE00E58E76 /* CurrencyUITextFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyUITextFieldTests.swift; sourceTree = "<group>"; };
 		D5EE09BA206210BE00E58E76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D5EE09C7206213B900E58E76 /* CurrencyUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyUITextField.swift; sourceTree = "<group>"; };
+		D5EE09C92064AEB000E58E76 /* CurencySymbolType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurencySymbolType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,6 +280,7 @@
 				D5EE09AB206210BE00E58E76 /* CurrencyUITextField.h */,
 				D5EE09AC206210BE00E58E76 /* Info.plist */,
 				D5EE09C7206213B900E58E76 /* CurrencyUITextField.swift */,
+				D5EE09C92064AEB000E58E76 /* CurencySymbolType.swift */,
 			);
 			path = CurrencyUITextField;
 			sourceTree = "<group>";
@@ -531,6 +534,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5EE09CA2064AEB000E58E76 /* CurencySymbolType.swift in Sources */,
 				D5EE09C8206213B900E58E76 /* CurrencyUITextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

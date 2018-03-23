@@ -8,8 +8,10 @@
 
 import UIKit
 
-
 class CurrencyUITextField: UITextField {
+    
+    var symbolType: CurencySymbolType = .dollar
+    var currencyFormatter = NumberFormatter()
 
     /*
      // Only override draw() if you perform custom drawing.
@@ -21,13 +23,30 @@ class CurrencyUITextField: UITextField {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
+        configureFormatterAndKeyboard()
+        addTarget()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        configureFormatterAndKeyboard()
+        addTarget()
     }
     
+    // MARK: Configure text formatter and keyboard
+    private func configureFormatterAndKeyboard() {
+        keyboardType = UIKeyboardType.decimalPad
+        
+        if symbolType == .currentLanguage {
+            let userLanguage = Locale.preferredLanguages.first!
+            currencyFormatter.currencySymbol = CurencySymbolType(language: userLanguage).rawValue
+            
+        } else {
+            currencyFormatter.currencySymbol = symbolType.rawValue
+        }
+    }
+    
+    // MARK: Text Did Change target
     private func addTarget() {
         addTarget(self, action: #selector(textDidChange), for: .editingChanged)
     }
