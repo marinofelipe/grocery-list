@@ -1,3 +1,9 @@
+DOING:
+    - CurrencyUITextField
+
+TODO:
+    - setting to select custom currency
+
 // selecting a row will animate price subview
     // animate text field from row frame
 
