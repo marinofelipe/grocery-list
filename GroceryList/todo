@@ -1,8 +1,10 @@
 DOING:
     - CurrencyUITextField
-
+        - auto currency based on user Localce settings
 TODO:
-    - setting to select custom currency
+    -
+    
+    
 
 // selecting a row will animate price subview
     // animate text field from row frame
@@ -14,3 +16,18 @@ TODO:
 
 // clicking outside the price text field would dismiss it
 // clicking ok in the keyboard would confirm the value and add the row to the bought section
+
+
+IDEAS:
+    - bought item with price indication based on history (more/less than best price && percentage)
+    - real time shopping some and items price indicators to help in his decisions
+    
+    - COREML?
+    
+    - Think about how to differ creating and buying modes
+    
+    - Price indicators based on history
+    
+GOAL: 
+    - Fast to use experience
+    - help user decisions with price and sum indicators
