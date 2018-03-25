@@ -1,6 +1,7 @@
 DOING:
     - CurrencyUITextField
-        - auto currency based on user Localce settings
+        - auto currency based on user Locale settings
+        - tests
 TODO:
     -
     

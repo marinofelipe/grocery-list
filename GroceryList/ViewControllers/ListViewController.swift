@@ -67,7 +67,6 @@ extension ListViewController: UICollectionViewDelegate {
         
         let cellFrameOnView = view.convert(cell.frame, from: cell)
         
-        
         //add subview animating from frame
         
         

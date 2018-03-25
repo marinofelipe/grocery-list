@@ -53,6 +53,15 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="axc-3X-DfS" customClass="CurrencyUITextField" customModule="CurrencyUITextField">
+                                                    <rect key="frame" x="129.5" y="4" width="100" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="Cfl-oc-Obx"/>
+                                                    </constraints>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
                                             </subviews>
                                         </view>
                                         <constraints>
@@ -60,6 +69,8 @@
                                             <constraint firstItem="6XZ-ZG-JFx" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="l3I-HU-YWr" secondAttribute="trailing" constant="10" id="iou-dS-LoK"/>
                                             <constraint firstItem="6XZ-ZG-JFx" firstAttribute="centerY" secondItem="48X-d1-MdA" secondAttribute="centerY" id="kTo-UA-zKH"/>
                                             <constraint firstItem="l3I-HU-YWr" firstAttribute="centerY" secondItem="48X-d1-MdA" secondAttribute="centerY" id="n9P-sN-e4s"/>
+                                            <constraint firstItem="axc-3X-DfS" firstAttribute="centerX" secondItem="48X-d1-MdA" secondAttribute="centerX" id="qlA-Sk-XAv"/>
+                                            <constraint firstItem="axc-3X-DfS" firstAttribute="centerY" secondItem="48X-d1-MdA" secondAttribute="centerY" id="wZt-gI-or3"/>
                                             <constraint firstAttribute="trailing" secondItem="6XZ-ZG-JFx" secondAttribute="trailing" constant="20" id="yYx-hz-UNa"/>
                                         </constraints>
                                         <connections>

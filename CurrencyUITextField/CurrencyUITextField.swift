@@ -10,8 +10,7 @@ import UIKit
 
 class CurrencyUITextField: UITextField {
     
-    var symbolType: CurencySymbolType = .dollar
-    var currencyFormatter = NumberFormatter()
+    var numberFormatter = NumberFormatter()
 
     /*
      // Only override draw() if you perform custom drawing.
@@ -23,27 +22,32 @@ class CurrencyUITextField: UITextField {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        configureFormatterAndKeyboard()
-        addTarget()
+        initComponents()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        configureFormatterAndKeyboard()
+        initComponents()
+    }
+    
+    // MARK: Configuration
+    private func initComponents() {
+        configureFormatter()
+        configureKeyboard()
         addTarget()
     }
     
-    // MARK: Configure text formatter and keyboard
-    private func configureFormatterAndKeyboard() {
-        keyboardType = UIKeyboardType.decimalPad
+    private func configureFormatter() {
+        numberFormatter.minimumFractionDigits = 2
+        numberFormatter.maximumFractionDigits = 2
+        numberFormatter.maximumIntegerDigits = 4
+        numberFormatter.alwaysShowsDecimalSeparator = true
         
-        if symbolType == .currentLanguage {
-            let userLanguage = Locale.preferredLanguages.first!
-            currencyFormatter.currencySymbol = CurencySymbolType(language: userLanguage).rawValue
-            
-        } else {
-            currencyFormatter.currencySymbol = symbolType.rawValue
-        }
+        numberFormatter.numberStyle = .currency
+    }
+    
+    private func configureKeyboard() {
+        keyboardType = UIKeyboardType.decimalPad
     }
     
     // MARK: Text Did Change target
@@ -54,5 +58,8 @@ class CurrencyUITextField: UITextField {
     // MARK: Action
     @objc private func textDidChange(_ textField: CurrencyUITextField) {
         
+        if let text = textField.text, let textIntValue = Int(text) {
+            textField.text = numberFormatter.string(from: NSNumber(value: textIntValue))
+        }
     }
 }
