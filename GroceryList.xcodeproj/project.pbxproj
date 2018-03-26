@@ -148,6 +148,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		776E239820694722004E4664 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		776E23992069472B004E4664 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		776E239A2069472F004E4664 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		776E239B20694737004E4664 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		D53D58D3205DEB4F0084E3AA = {
 			isa = PBXGroup;
 			children = (
@@ -175,14 +203,14 @@
 		D53D58DE205DEB4F0084E3AA /* GroceryList */ = {
 			isa = PBXGroup;
 			children = (
+				776E239B20694737004E4664 /* Extensions */,
+				776E239A2069472F004E4664 /* Entities */,
+				776E23992069472B004E4664 /* Models */,
+				776E239820694722004E4664 /* Services */,
 				D5EE0997205E048500E58E76 /* Views */,
 				D5EE0996205E047D00E58E76 /* ViewModels */,
 				D5EE0995205E046A00E58E76 /* ViewControllers */,
 				D5EE0994205E046400E58E76 /* Utils */,
-				D5EE0993205E045D00E58E76 /* Services */,
-				D5EE0992205E045900E58E76 /* Models */,
-				D5EE0991205E035600E58E76 /* Entities */,
-				D5EE0990205E034A00E58E76 /* Extensions */,
 				D53D58DF205DEB4F0084E3AA /* AppDelegate.swift */,
 				D5EE0998205F474700E58E76 /* todo */,
 				D53D58E5205DEB4F0084E3AA /* Main.storyboard */,
@@ -209,34 +237,6 @@
 				D53D5903205DEB500084E3AA /* Info.plist */,
 			);
 			path = GroceryListUITests;
-			sourceTree = "<group>";
-		};
-		D5EE0990205E034A00E58E76 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		D5EE0991205E035600E58E76 /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Entities;
-			sourceTree = "<group>";
-		};
-		D5EE0992205E045900E58E76 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		D5EE0993205E045D00E58E76 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Services;
 			sourceTree = "<group>";
 		};
 		D5EE0994205E046400E58E76 /* Utils */ = {
