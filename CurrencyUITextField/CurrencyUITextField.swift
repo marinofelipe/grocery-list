@@ -11,6 +11,7 @@ import UIKit
 class CurrencyUITextField: UITextField {
     
     var numberFormatter = NumberFormatter()
+    var inputedValues: Int = 0
 
     /*
      // Only override draw() if you perform custom drawing.
@@ -58,8 +59,20 @@ class CurrencyUITextField: UITextField {
     // MARK: Action
     @objc private func textDidChange(_ textField: CurrencyUITextField) {
         
-        if let text = textField.text, let textIntValue = Int(text) {
-            textField.text = numberFormatter.string(from: NSNumber(value: textIntValue))
+        inputedValues += 1
+        
+        if var text = textField.text {
+            
+            if text.count == 1 {
+                text = "0,0\(text)"
+            }
+            
+            let doubleValue = Double(text.replacingOccurrences(of: ",", with: ".").replacingOccurrences(of: numberFormatter.currencySymbol, with: ""))
+            textField.text = numberFormatter.string(from: NSNumber(value: doubleValue!))
+            
+            if let currentCursorPosition = position(from: endOfDocument, offset: -inputedValues) {
+                selectedTextRange = textRange(from: currentCursorPosition, to: currentCursorPosition)
+            }
         }
     }
 }
