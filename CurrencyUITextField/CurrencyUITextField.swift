@@ -66,8 +66,9 @@ class CurrencyUITextField: UITextField {
                 text.moveDecimalSeparator()
             }
             
-            let doubleValue = Double(text.replacingOccurrences(of: ",", with: ".").replacingOccurrences(of: numberFormatter.currencySymbol, with: ""))
-            textField.text = numberFormatter.string(from: NSNumber(value: doubleValue!))
+            if let doubleValue = Double(text.replacingOccurrences(of: ",", with: ".").replacingOccurrences(of: numberFormatter.currencySymbol, with: "")) {
+                textField.text = numberFormatter.string(from: NSNumber(value: doubleValue))
+            }
         }
     }
 }
