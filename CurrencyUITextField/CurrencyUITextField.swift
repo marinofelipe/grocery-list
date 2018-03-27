@@ -11,7 +11,6 @@ import UIKit
 class CurrencyUITextField: UITextField {
     
     var numberFormatter = NumberFormatter()
-    var inputedValues: Int = 0
 
     /*
      // Only override draw() if you perform custom drawing.
@@ -58,21 +57,30 @@ class CurrencyUITextField: UITextField {
 
     // MARK: Action
     @objc private func textDidChange(_ textField: CurrencyUITextField) {
-        
-        inputedValues += 1
-        
         if var text = textField.text {
             
             if text.count == 1 {
                 text = "0,0\(text)"
+            } else {
+                text = text.replacingOccurrences(of: numberFormatter.currencySymbol, with: "")
+                text.moveDecimalSeparator()
             }
             
             let doubleValue = Double(text.replacingOccurrences(of: ",", with: ".").replacingOccurrences(of: numberFormatter.currencySymbol, with: ""))
             textField.text = numberFormatter.string(from: NSNumber(value: doubleValue!))
+        }
+    }
+}
+
+// MARK: Adjust currency text separator
+extension String {
+    
+    mutating func moveDecimalSeparator() {
+        if let separatorIndex = index(of: ".") {
+            let newInteger = self[index(separatorIndex, offsetBy: 1)..<index(separatorIndex, offsetBy: 2)]
             
-            if let currentCursorPosition = position(from: endOfDocument, offset: -inputedValues) {
-                selectedTextRange = textRange(from: currentCursorPosition, to: currentCursorPosition)
-            }
+            replaceSubrange(separatorIndex..<index(separatorIndex, offsetBy: 1), with: newInteger)
+            replaceSubrange(index(separatorIndex, offsetBy: 1)..<index(separatorIndex, offsetBy: 2), with: ".")
         }
     }
 }
