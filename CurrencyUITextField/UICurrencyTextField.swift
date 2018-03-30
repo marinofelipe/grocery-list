@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CurrencyUITextField: UITextField {
+class UICurrencyTextField: UITextField {
     
     var numberFormatter = NumberFormatter()
 
@@ -57,7 +57,7 @@ class CurrencyUITextField: UITextField {
     }
 
     // MARK: Action
-    @objc private func textDidChange(_ textField: CurrencyUITextField) {
+    @objc private func textDidChange(_ textField: UICurrencyTextField) {
         if var text = textField.text {
             
             if text.count == 1 {

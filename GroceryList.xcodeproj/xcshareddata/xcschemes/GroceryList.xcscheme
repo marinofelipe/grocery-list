@@ -55,8 +55,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D5EE09B0206210BE00E58E76"
-               BuildableName = "CurrencyUITextFieldTests.xctest"
-               BlueprintName = "CurrencyUITextFieldTests"
+               BuildableName = "UICurrencyTextFieldTests.xctest"
+               BlueprintName = "UICurrencyTextFieldTests"
                ReferencedContainer = "container:GroceryList.xcodeproj">
             </BuildableReference>
          </TestableReference>

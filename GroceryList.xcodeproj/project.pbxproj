@@ -19,12 +19,12 @@
 		D5EE099F2062021200E58E76 /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EE099E2062021200E58E76 /* ItemCollectionViewCell.swift */; };
 		D5EE09A12062025A00E58E76 /* ItemCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EE09A02062025A00E58E76 /* ItemCellViewModel.swift */; };
 		D5EE09A32062027800E58E76 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EE09A22062027800E58E76 /* Constants.swift */; };
-		D5EE09B2206210BE00E58E76 /* CurrencyUITextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5EE09A9206210BD00E58E76 /* CurrencyUITextField.framework */; };
-		D5EE09B9206210BE00E58E76 /* CurrencyUITextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EE09B8206210BE00E58E76 /* CurrencyUITextFieldTests.swift */; };
-		D5EE09BB206210BE00E58E76 /* CurrencyUITextField.h in Headers */ = {isa = PBXBuildFile; fileRef = D5EE09AB206210BE00E58E76 /* CurrencyUITextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D5EE09BE206210BE00E58E76 /* CurrencyUITextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5EE09A9206210BD00E58E76 /* CurrencyUITextField.framework */; };
-		D5EE09BF206210BE00E58E76 /* CurrencyUITextField.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D5EE09A9206210BD00E58E76 /* CurrencyUITextField.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D5EE09C8206213B900E58E76 /* CurrencyUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EE09C7206213B900E58E76 /* CurrencyUITextField.swift */; };
+		D5EE09B2206210BE00E58E76 /* UICurrencyTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5EE09A9206210BD00E58E76 /* UICurrencyTextField.framework */; };
+		D5EE09B9206210BE00E58E76 /* UICurrencyTextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EE09B8206210BE00E58E76 /* UICurrencyTextFieldTests.swift */; };
+		D5EE09BB206210BE00E58E76 /* UICurrencyTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = D5EE09AB206210BE00E58E76 /* UICurrencyTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D5EE09BE206210BE00E58E76 /* UICurrencyTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5EE09A9206210BD00E58E76 /* UICurrencyTextField.framework */; };
+		D5EE09BF206210BE00E58E76 /* UICurrencyTextField.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D5EE09A9206210BD00E58E76 /* UICurrencyTextField.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D5EE09C8206213B900E58E76 /* UICurrencyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EE09C7206213B900E58E76 /* UICurrencyTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,7 +72,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D5EE09BF206210BE00E58E76 /* CurrencyUITextField.framework in Embed Frameworks */,
+				D5EE09BF206210BE00E58E76 /* UICurrencyTextField.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -98,13 +98,13 @@
 		D5EE099E2062021200E58E76 /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		D5EE09A02062025A00E58E76 /* ItemCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCellViewModel.swift; sourceTree = "<group>"; };
 		D5EE09A22062027800E58E76 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		D5EE09A9206210BD00E58E76 /* CurrencyUITextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CurrencyUITextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D5EE09AB206210BE00E58E76 /* CurrencyUITextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CurrencyUITextField.h; sourceTree = "<group>"; };
+		D5EE09A9206210BD00E58E76 /* UICurrencyTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UICurrencyTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5EE09AB206210BE00E58E76 /* UICurrencyTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UICurrencyTextField.h; sourceTree = "<group>"; };
 		D5EE09AC206210BE00E58E76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D5EE09B1206210BE00E58E76 /* CurrencyUITextFieldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CurrencyUITextFieldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D5EE09B8206210BE00E58E76 /* CurrencyUITextFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyUITextFieldTests.swift; sourceTree = "<group>"; };
+		D5EE09B1206210BE00E58E76 /* UICurrencyTextFieldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UICurrencyTextFieldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5EE09B8206210BE00E58E76 /* UICurrencyTextFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICurrencyTextFieldTests.swift; sourceTree = "<group>"; };
 		D5EE09BA206210BE00E58E76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D5EE09C7206213B900E58E76 /* CurrencyUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyUITextField.swift; sourceTree = "<group>"; };
+		D5EE09C7206213B900E58E76 /* UICurrencyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICurrencyTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5EE09BE206210BE00E58E76 /* CurrencyUITextField.framework in Frameworks */,
+				D5EE09BE206210BE00E58E76 /* UICurrencyTextField.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,7 +141,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5EE09B2206210BE00E58E76 /* CurrencyUITextField.framework in Frameworks */,
+				D5EE09B2206210BE00E58E76 /* UICurrencyTextField.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,8 +194,8 @@
 				D53D58DC205DEB4F0084E3AA /* GroceryList.app */,
 				D53D58F2205DEB4F0084E3AA /* GroceryListTests.xctest */,
 				D53D58FD205DEB500084E3AA /* GroceryListUITests.xctest */,
-				D5EE09A9206210BD00E58E76 /* CurrencyUITextField.framework */,
-				D5EE09B1206210BE00E58E76 /* CurrencyUITextFieldTests.xctest */,
+				D5EE09A9206210BD00E58E76 /* UICurrencyTextField.framework */,
+				D5EE09B1206210BE00E58E76 /* UICurrencyTextFieldTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -275,9 +275,9 @@
 		D5EE09AA206210BD00E58E76 /* CurrencyUITextField */ = {
 			isa = PBXGroup;
 			children = (
-				D5EE09AB206210BE00E58E76 /* CurrencyUITextField.h */,
+				D5EE09AB206210BE00E58E76 /* UICurrencyTextField.h */,
 				D5EE09AC206210BE00E58E76 /* Info.plist */,
-				D5EE09C7206213B900E58E76 /* CurrencyUITextField.swift */,
+				D5EE09C7206213B900E58E76 /* UICurrencyTextField.swift */,
 			);
 			path = CurrencyUITextField;
 			sourceTree = "<group>";
@@ -285,7 +285,7 @@
 		D5EE09B7206210BE00E58E76 /* CurrencyTextFieldTests */ = {
 			isa = PBXGroup;
 			children = (
-				D5EE09B8206210BE00E58E76 /* CurrencyUITextFieldTests.swift */,
+				D5EE09B8206210BE00E58E76 /* UICurrencyTextFieldTests.swift */,
 				D5EE09BA206210BE00E58E76 /* Info.plist */,
 			);
 			path = CurrencyTextFieldTests;
@@ -298,7 +298,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5EE09BB206210BE00E58E76 /* CurrencyUITextField.h in Headers */,
+				D5EE09BB206210BE00E58E76 /* UICurrencyTextField.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,9 +360,9 @@
 			productReference = D53D58FD205DEB500084E3AA /* GroceryListUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		D5EE09A8206210BD00E58E76 /* CurrencyUITextField */ = {
+		D5EE09A8206210BD00E58E76 /* UICurrencyTextField */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D5EE09C0206210BE00E58E76 /* Build configuration list for PBXNativeTarget "CurrencyUITextField" */;
+			buildConfigurationList = D5EE09C0206210BE00E58E76 /* Build configuration list for PBXNativeTarget "UICurrencyTextField" */;
 			buildPhases = (
 				D5EE09A4206210BD00E58E76 /* Sources */,
 				D5EE09A5206210BD00E58E76 /* Frameworks */,
@@ -373,14 +373,14 @@
 			);
 			dependencies = (
 			);
-			name = CurrencyUITextField;
+			name = UICurrencyTextField;
 			productName = CurrencyTextField;
-			productReference = D5EE09A9206210BD00E58E76 /* CurrencyUITextField.framework */;
+			productReference = D5EE09A9206210BD00E58E76 /* UICurrencyTextField.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		D5EE09B0206210BE00E58E76 /* CurrencyUITextFieldTests */ = {
+		D5EE09B0206210BE00E58E76 /* UICurrencyTextFieldTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D5EE09C4206210BE00E58E76 /* Build configuration list for PBXNativeTarget "CurrencyUITextFieldTests" */;
+			buildConfigurationList = D5EE09C4206210BE00E58E76 /* Build configuration list for PBXNativeTarget "UICurrencyTextFieldTests" */;
 			buildPhases = (
 				D5EE09AD206210BE00E58E76 /* Sources */,
 				D5EE09AE206210BE00E58E76 /* Frameworks */,
@@ -392,9 +392,9 @@
 				D5EE09B4206210BE00E58E76 /* PBXTargetDependency */,
 				D5EE09B6206210BE00E58E76 /* PBXTargetDependency */,
 			);
-			name = CurrencyUITextFieldTests;
+			name = UICurrencyTextFieldTests;
 			productName = CurrencyTextFieldTests;
-			productReference = D5EE09B1206210BE00E58E76 /* CurrencyUITextFieldTests.xctest */;
+			productReference = D5EE09B1206210BE00E58E76 /* UICurrencyTextFieldTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -449,8 +449,8 @@
 				D53D58DB205DEB4F0084E3AA /* GroceryList */,
 				D53D58F1205DEB4F0084E3AA /* GroceryListTests */,
 				D53D58FC205DEB500084E3AA /* GroceryListUITests */,
-				D5EE09A8206210BD00E58E76 /* CurrencyUITextField */,
-				D5EE09B0206210BE00E58E76 /* CurrencyUITextFieldTests */,
+				D5EE09A8206210BD00E58E76 /* UICurrencyTextField */,
+				D5EE09B0206210BE00E58E76 /* UICurrencyTextFieldTests */,
 			);
 		};
 /* End PBXProject section */
@@ -531,7 +531,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5EE09C8206213B900E58E76 /* CurrencyUITextField.swift in Sources */,
+				D5EE09C8206213B900E58E76 /* UICurrencyTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,7 +539,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5EE09B9206210BE00E58E76 /* CurrencyUITextFieldTests.swift in Sources */,
+				D5EE09B9206210BE00E58E76 /* UICurrencyTextFieldTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -558,7 +558,7 @@
 		};
 		D5EE09B4206210BE00E58E76 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D5EE09A8206210BD00E58E76 /* CurrencyUITextField */;
+			target = D5EE09A8206210BD00E58E76 /* UICurrencyTextField */;
 			targetProxy = D5EE09B3206210BE00E58E76 /* PBXContainerItemProxy */;
 		};
 		D5EE09B6206210BE00E58E76 /* PBXTargetDependency */ = {
@@ -568,7 +568,7 @@
 		};
 		D5EE09BD206210BE00E58E76 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D5EE09A8206210BD00E58E76 /* CurrencyUITextField */;
+			target = D5EE09A8206210BD00E58E76 /* UICurrencyTextField */;
 			targetProxy = D5EE09BC206210BE00E58E76 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -926,7 +926,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D5EE09C0206210BE00E58E76 /* Build configuration list for PBXNativeTarget "CurrencyUITextField" */ = {
+		D5EE09C0206210BE00E58E76 /* Build configuration list for PBXNativeTarget "UICurrencyTextField" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D5EE09C1206210BE00E58E76 /* Debug */,
@@ -935,7 +935,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D5EE09C4206210BE00E58E76 /* Build configuration list for PBXNativeTarget "CurrencyUITextFieldTests" */ = {
+		D5EE09C4206210BE00E58E76 /* Build configuration list for PBXNativeTarget "UICurrencyTextFieldTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D5EE09C5206210BE00E58E76 /* Debug */,

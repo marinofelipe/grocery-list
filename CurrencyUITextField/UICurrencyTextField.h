@@ -1,6 +1,6 @@
 //
-//  CurrencyUITextField.h
-//  CurrencyUITextField
+//  UICurrencyTextField.h
+//  UICurrencyTextField
 //
 //  Created by Felipe Lefèvre Marino on 3/21/18.
 //  Copyright © 2018 Felipe Lefèvre Marino. All rights reserved.
