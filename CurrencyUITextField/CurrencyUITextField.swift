@@ -41,6 +41,7 @@ class CurrencyUITextField: UITextField {
         numberFormatter.minimumFractionDigits = 2
         numberFormatter.maximumFractionDigits = 2
         numberFormatter.maximumIntegerDigits = 4
+        numberFormatter.minimumIntegerDigits = 1
         numberFormatter.alwaysShowsDecimalSeparator = true
         
         numberFormatter.numberStyle = .currency
@@ -61,12 +62,16 @@ class CurrencyUITextField: UITextField {
             
             if text.count == 1 {
                 text = "0,0\(text)"
-            } else {
+                text = text.replacingOccurrences(of: ",", with: ".")
+            } else if text.count <= 8 {
                 text = text.replacingOccurrences(of: numberFormatter.currencySymbol, with: "")
                 text.moveDecimalSeparator()
+            } else {
+                text = text.replacingOccurrences(of: ",", with: "")
+                text.removeLastFractionDigit()
             }
             
-            if let doubleValue = Double(text.replacingOccurrences(of: ",", with: ".").replacingOccurrences(of: numberFormatter.currencySymbol, with: "")) {
+            if let doubleValue = Double(text.replacingOccurrences(of: numberFormatter.currencySymbol, with: "")) {
                 textField.text = numberFormatter.string(from: NSNumber(value: doubleValue))
             }
         }
@@ -83,5 +88,9 @@ extension String {
             replaceSubrange(separatorIndex..<index(separatorIndex, offsetBy: 1), with: newInteger)
             replaceSubrange(index(separatorIndex, offsetBy: 1)..<index(separatorIndex, offsetBy: 2), with: ".")
         }
+    }
+    
+    mutating func removeLastFractionDigit() {
+        replaceSubrange(index(endIndex, offsetBy: -1)..<endIndex, with: "")
     }
 }
