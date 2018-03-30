@@ -1,7 +1,9 @@
 DOING:
     - CurrencyUITextField
-        - auto currency based on user Locale settings
         - tests
+            - treat deletion crash
+            - treat comma input
+        - add support for from integer to decimal inputing mode && manually comma
 TODO:
     -
     
