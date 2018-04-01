@@ -1,7 +1,6 @@
 DOING:
     - CurrencyUITextField
         - tests
-            - treat deletion crash
             - treat comma input
         - add support for from integer to decimal inputing mode && manually comma
 TODO:

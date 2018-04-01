@@ -10,7 +10,7 @@ import UIKit
 
 class UICurrencyTextField: UITextField {
     
-    var numberFormatter = NumberFormatter()
+    private var numberFormatter = NumberFormatter()
 
     /*
      // Only override draw() if you perform custom drawing.
@@ -19,6 +19,11 @@ class UICurrencyTextField: UITextField {
      // Drawing code
      }
      */
+    
+    convenience init(numberFormatter: NumberFormatter, frame: CGRect) {
+        self.init(frame: frame)
+        self.numberFormatter = numberFormatter
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -57,7 +62,7 @@ class UICurrencyTextField: UITextField {
     }
 
     // MARK: Action
-    @objc private func textDidChange(_ textField: UICurrencyTextField) {
+    @objc func textDidChange(_ textField: UICurrencyTextField) {
         if var text = textField.text {
             
             if text.count == 1 {
@@ -68,7 +73,7 @@ class UICurrencyTextField: UITextField {
                 text.moveDecimalSeparator()
             } else {
                 text = text.replacingOccurrences(of: ",", with: "")
-                text.removeLastFractionDigit()
+                text.removeLast()
             }
             
             if let doubleValue = Double(text.replacingOccurrences(of: numberFormatter.currencySymbol, with: "")) {
@@ -83,14 +88,21 @@ extension String {
     
     mutating func moveDecimalSeparator() {
         if let separatorIndex = index(of: ".") {
-            let newInteger = self[index(separatorIndex, offsetBy: 1)..<index(separatorIndex, offsetBy: 2)]
             
-            replaceSubrange(separatorIndex..<index(separatorIndex, offsetBy: 1), with: newInteger)
-            replaceSubrange(index(separatorIndex, offsetBy: 1)..<index(separatorIndex, offsetBy: 2), with: ".")
+            if (endIndex.encodedOffset - separatorIndex.encodedOffset) >= 3 {
+            
+                let newInteger = self[index(separatorIndex, offsetBy: 1)..<index(separatorIndex, offsetBy: 2)]
+            
+                replaceSubrange(separatorIndex..<index(separatorIndex, offsetBy: 1), with: newInteger)
+                replaceSubrange(index(separatorIndex, offsetBy: 1)..<index(separatorIndex, offsetBy: 2), with: ".")
+            } else {
+                let newDecimal = self[index(separatorIndex, offsetBy: -1)..<separatorIndex]
+                
+                replaceSubrange(separatorIndex..<index(separatorIndex, offsetBy: 1), with: newDecimal)
+                replaceSubrange(index(separatorIndex, offsetBy: -1)..<separatorIndex, with: ".")
+                
+                self = replacingOccurrences(of: ",", with: "")
+            }
         }
-    }
-    
-    mutating func removeLastFractionDigit() {
-        replaceSubrange(index(endIndex, offsetBy: -1)..<endIndex, with: "")
     }
 }
