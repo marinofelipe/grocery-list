@@ -69,10 +69,6 @@ class CurrencyTextFieldTests: XCTestCase {
         }
     }
     
-    func testInputingComma() {
-        
-    }
-    
     func testMovingDecimalSeparator() {
         
     }

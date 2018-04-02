@@ -53,7 +53,7 @@ class UICurrencyTextField: UITextField {
     }
     
     private func configureKeyboard() {
-        keyboardType = UIKeyboardType.decimalPad
+        keyboardType = UIKeyboardType.numberPad
     }
     
     // MARK: Text Did Change target
