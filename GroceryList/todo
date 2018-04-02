@@ -1,11 +1,12 @@
 DOING:
     - CurrencyUITextField
-        - tests
-            - treat comma input
-        - add support for from integer to decimal inputing mode && manually comma
+        - bug when typing with cursor outside endIndex
 TODO:
-    -
-    
+    - CurrencyUITextField
+
+        - enable all of following modes through enum typing
+        - from left to right input
+        - decimal pad (maybe free inputing)
     
 
 // selecting a row will animate price subview
