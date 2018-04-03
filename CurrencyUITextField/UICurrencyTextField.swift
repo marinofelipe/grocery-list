@@ -65,9 +65,15 @@ class UICurrencyTextField: UITextField {
     @objc func textDidChange(_ textField: UICurrencyTextField) {
         if var text = textField.text {
             
+            //6 numbers + decimal and thousand separators
+            guard text.cleanFormat().count <= 8 else {
+                textField.text?.removeLast()
+                return
+            }
+            
             if text.count == 1 {
                 text = "0.0\(text)"
-            } else if text.cleanFormat().count <= 6 {
+            } else {
                 text = text.replacingOccurrences(of: numberFormatter.currencySymbol, with: "")
                 
                 if Locale.current.currencySymbol == "R$" {
@@ -75,8 +81,6 @@ class UICurrencyTextField: UITextField {
                 }
                 
                 text.moveDecimalSeparator()
-            } else {
-                text.removeLastAndFormat()
             }
             
             if let doubleValue = Double(text.replacingOccurrences(of: numberFormatter.currencySymbol, with: "")) {

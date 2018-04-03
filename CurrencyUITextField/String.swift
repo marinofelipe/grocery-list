@@ -32,20 +32,10 @@ extension String {
         }
     }
     
-    //when more values are entered and the currency number should not grow
-    mutating func removeLastAndFormat() {
-        let currencySymbol = Locale.current.currencySymbol
-        self = replacingOccurrences(of: currencySymbol ?? "", with: "")
-        
-        replaceSubrange(index(startIndex, offsetBy: 1)..<index(startIndex, offsetBy: 2), with: "")
-        removeLast()
-        replaceSubrange(index(endIndex, offsetBy: -3)..<index(endIndex, offsetBy: -2), with: ".")
-    }
-    
     //returns the number characters of the currency - can be used to count value size independent of currency symbol and separators
     func cleanFormat() -> String {
         let currencySymbol = Locale.current.currencySymbol
         
-        return replacingOccurrences(of: ".", with: "").replacingOccurrences(of: ",", with: "").replacingOccurrences(of: currencySymbol ?? "", with: "")
+        return replacingOccurrences(of: currencySymbol ?? "", with: "")
     }
 }
