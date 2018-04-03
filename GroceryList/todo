@@ -1,8 +1,7 @@
 DOING:
     - CurrencyUITextField
-        - fix deletion in devices - test is failing
-        - fix typing/deleting with cursor not at endIndex
         - tests
+        - work with higher values (millions...)
 TODO:
     - CurrencyUITextField
 
