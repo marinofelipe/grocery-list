@@ -69,11 +69,15 @@ class CurrencyTextFieldTests: XCTestCase {
         }
     }
     
-    func testMovingDecimalSeparator() {
+    func testInputingNotAtEndIndex() {
         
     }
     
-    func testLastCharacterRemoval() {
+    func testDeletingNotAtEndIndex() {
+        
+    }
+    
+    func testMovingDecimalSeparator() {
         
     }
     

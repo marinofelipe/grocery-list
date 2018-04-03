@@ -66,14 +66,17 @@ class UICurrencyTextField: UITextField {
         if var text = textField.text {
             
             if text.count == 1 {
-                text = "0,0\(text)"
-                text = text.replacingOccurrences(of: ",", with: ".")
-            } else if text.count <= 8 {
+                text = "0.0\(text)"
+            } else if text.cleanFormat().count <= 6 {
                 text = text.replacingOccurrences(of: numberFormatter.currencySymbol, with: "")
+                
+                if Locale.current.currencySymbol == "R$" {
+                    text = text.replacingOccurrences(of: ",", with: ".")
+                }
+                
                 text.moveDecimalSeparator()
             } else {
-                text = text.replacingOccurrences(of: ",", with: "")
-                text.removeLast()
+                text.removeLastAndFormat()
             }
             
             if let doubleValue = Double(text.replacingOccurrences(of: numberFormatter.currencySymbol, with: "")) {
@@ -83,14 +86,14 @@ class UICurrencyTextField: UITextField {
     }
 }
 
-// MARK: Adjust currency text separator
+// MARK: String Currency Extension
 extension String {
     
     mutating func moveDecimalSeparator() {
         if let separatorIndex = index(of: ".") {
             
             if (endIndex.encodedOffset - separatorIndex.encodedOffset) >= 3 {
-            
+                
                 let newInteger = self[index(separatorIndex, offsetBy: 1)..<index(separatorIndex, offsetBy: 2)]
             
                 replaceSubrange(separatorIndex..<index(separatorIndex, offsetBy: 1), with: newInteger)
@@ -104,5 +107,20 @@ extension String {
                 self = replacingOccurrences(of: ",", with: "")
             }
         }
+    }
+    
+    mutating func removeLastAndFormat() {
+        let currencySymbol = Locale.current.currencySymbol
+        self = replacingOccurrences(of: currencySymbol ?? "", with: "")
+        
+        replaceSubrange(index(startIndex, offsetBy: 1)..<index(startIndex, offsetBy: 2), with: "")
+        removeLast()
+        replaceSubrange(index(endIndex, offsetBy: -3)..<index(endIndex, offsetBy: -2), with: ".")
+    }
+    
+    func cleanFormat() -> String {
+        let currencySymbol = Locale.current.currencySymbol
+        
+        return replacingOccurrences(of: ".", with: "").replacingOccurrences(of: ",", with: "").replacingOccurrences(of: currencySymbol ?? "", with: "")
     }
 }

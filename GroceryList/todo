@@ -1,6 +1,7 @@
 DOING:
     - CurrencyUITextField
         - bug when typing with cursor outside endIndex
+        - tests
 TODO:
     - CurrencyUITextField
 
