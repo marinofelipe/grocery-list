@@ -66,7 +66,7 @@ class UICurrencyTextField: UITextField {
         if var text = textField.text {
             
             //6 numbers
-            guard text.cleanFormat().count <= 6 else {
+            guard text.numeralFormat().count <= 6 else {
                 textField.text?.removeLast()
                 return
             }
@@ -74,7 +74,7 @@ class UICurrencyTextField: UITextField {
             if text.count == 1 {
                 text = "0.0\(text)"
             } else {
-                text = text.cleanFormat()
+                text = text.numeralFormat()
                 text.addDecimalSeparator()
             }
             

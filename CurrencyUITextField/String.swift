@@ -17,13 +17,8 @@ extension String {
         replaceSubrange(index(endIndex, offsetBy: -2)..<endIndex, with: "." + lastTwoChars)
     }
     
-    //returns the number characters of the currency - can be used to count value size independent of currency symbol and separators
-    func cleanFormat() -> String {
-        let currencySymbol = Locale.current.currencySymbol
-        
-        return replacingOccurrences(of: currencySymbol ?? "", with: "")
-            .replacingOccurrences(of: ".", with: "")
-            .replacingOccurrences(of: ",", with: "")
+    //returns only
+    func numeralFormat() -> String {
+        return replacingOccurrences( of:"[^0-9]", with: "", options: .regularExpression)
     }
 }
-
