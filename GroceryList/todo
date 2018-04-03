@@ -1,5 +1,6 @@
 DOING:
     - CurrencyUITextField
+        - fix deletion in devices - test is failing
         - fix typing/deleting with cursor not at endIndex
         - tests
 TODO:
