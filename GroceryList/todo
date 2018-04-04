@@ -1,10 +1,10 @@
 DOING:
     - CurrencyUITextField
+        - work with higher values (millions...)
         - tests
         - do not allow pasting non numerical values
 TODO:
     - CurrencyUITextField
-        - work with higher values (millions...)
         - enable all of following modes through enum typing
         - from left to right input
         - decimal pad (maybe free inputing)

@@ -8,9 +8,10 @@
 
 import UIKit
 
-class UICurrencyTextField: UITextField {
+public class UICurrencyTextField: UITextField {
     
     private var numberFormatter = NumberFormatter()
+    public var maximumIntegers: Int?
 
     /*
      // Only override draw() if you perform custom drawing.
@@ -20,17 +21,19 @@ class UICurrencyTextField: UITextField {
      }
      */
     
-    convenience init(numberFormatter: NumberFormatter, frame: CGRect) {
+    public convenience init(numberFormatter: NumberFormatter, frame: CGRect) {
         self.init(frame: frame)
         self.numberFormatter = numberFormatter
+        configureKeyboard()
+        addTarget()
     }
     
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
         initComponents()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         initComponents()
     }
@@ -45,7 +48,7 @@ class UICurrencyTextField: UITextField {
     private func configureFormatter() {
         numberFormatter.minimumFractionDigits = 2
         numberFormatter.maximumFractionDigits = 2
-        numberFormatter.maximumIntegerDigits = 4
+        numberFormatter.maximumIntegerDigits = 7
         numberFormatter.minimumIntegerDigits = 1
         numberFormatter.alwaysShowsDecimalSeparator = true
         
@@ -65,8 +68,8 @@ class UICurrencyTextField: UITextField {
     @objc func textDidChange(_ textField: UICurrencyTextField) {
         if var text = textField.text {
             
-            //6 numbers
-            guard text.numeralFormat().count <= 6 else {
+            let maxDigitsCount = (maximumIntegers ?? numberFormatter.maximumIntegerDigits) + numberFormatter.maximumFractionDigits
+            guard text.numeralFormat().count <= maxDigitsCount else {
                 textField.text?.removeLast()
                 return
             }

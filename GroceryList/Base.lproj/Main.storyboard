@@ -76,6 +76,7 @@
                                         <connections>
                                             <outlet property="nameLabel" destination="l3I-HU-YWr" id="hAr-Gy-C08"/>
                                             <outlet property="priceLabel" destination="6XZ-ZG-JFx" id="qG6-Pv-uLL"/>
+                                            <outlet property="textField" destination="axc-3X-DfS" id="GEe-ym-0WO"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
