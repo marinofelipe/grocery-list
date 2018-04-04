@@ -11,7 +11,12 @@ import UIKit
 public class UICurrencyTextField: UITextField {
     
     private var numberFormatter = NumberFormatter()
-    public var maximumIntegers: Int?
+    public var maximumIntegers: Int? {
+        didSet {
+            guard let maxIntegers = maximumIntegers else { return }
+            numberFormatter.maximumIntegerDigits = maxIntegers
+        }
+    }
 
     /*
      // Only override draw() if you perform custom drawing.
@@ -68,7 +73,7 @@ public class UICurrencyTextField: UITextField {
     @objc func textDidChange(_ textField: UICurrencyTextField) {
         if var text = textField.text {
             
-            let maxDigitsCount = (maximumIntegers ?? numberFormatter.maximumIntegerDigits) + numberFormatter.maximumFractionDigits
+            let maxDigitsCount = numberFormatter.maximumIntegerDigits + numberFormatter.maximumFractionDigits
             guard text.numeralFormat().count <= maxDigitsCount else {
                 textField.text?.removeLast()
                 return
