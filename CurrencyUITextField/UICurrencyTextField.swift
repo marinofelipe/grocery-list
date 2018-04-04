@@ -73,6 +73,11 @@ public class UICurrencyTextField: UITextField {
     @objc func textDidChange(_ textField: UICurrencyTextField) {
         if var text = textField.text {
             
+            guard text.numeralFormat().count > 0 else {
+                textField.text?.removeAll()
+                return
+            }
+            
             let maxDigitsCount = numberFormatter.maximumIntegerDigits + numberFormatter.maximumFractionDigits
             guard text.numeralFormat().count <= maxDigitsCount else {
                 textField.text?.removeLast()

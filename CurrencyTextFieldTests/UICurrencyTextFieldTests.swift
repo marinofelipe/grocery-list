@@ -41,7 +41,27 @@ class CurrencyTextFieldTests: XCTestCase {
         
         if let onlyDigitsText = textField?.text?.replacingOccurrences(of: ".", with: "").replacingOccurrences(of: ",", with: "").replacingOccurrences(of: numberFormatter!.currencySymbol, with: "") {
             
-            XCTAssertEqual(onlyDigitsText.count, 6)
+            let maxDigits = (textField?.maximumIntegers ?? 7) + 2
+            
+            XCTAssertEqual(onlyDigitsText.count, maxDigits)
+        }
+    }
+    
+    func testCustomMaxDigitsCount() {
+        textField?.maximumIntegers = 4
+        
+        for _ in 0...10 {
+            var text = textField?.text ?? ""
+            text += "1"
+            
+            textField!.text = text
+            textField!.textDidChange(textField!)
+        }
+        
+        if let onlyDigitsText = textField?.text?.numeralFormat() {
+            let maxDigits = (textField?.maximumIntegers ?? 7) + 2
+            
+            XCTAssertEqual(onlyDigitsText.count, maxDigits)
         }
     }
     
@@ -64,9 +84,13 @@ class CurrencyTextFieldTests: XCTestCase {
         textField!.text = currentText
         textField!.textDidChange(textField!)
         
-        if let withoutCurrencySymbolText = textField?.text?.replacingOccurrences(of: numberFormatter!.currencySymbol, with: "") {
-            XCTAssertEqual(withoutCurrencySymbolText, "11.11")
+        if let withoutCurrencySymbolText = textField?.text?.numeralFormat() {
+            XCTAssertEqual(withoutCurrencySymbolText, "1111111")
         }
+    }
+    
+    func testPasting() {
+        
     }
     
     func testInputingNotAtEndIndex() {
