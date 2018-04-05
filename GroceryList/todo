@@ -1,7 +1,6 @@
 DOING:
     - CurrencyUITextField
         - tests
-        - do not allow pasting non numerical values
         - bug when typing not atEndIdex
         - crash when selecting and deleting including currency symbol
 TODO:
