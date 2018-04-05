@@ -32,14 +32,11 @@ class CurrencyTextFieldTests: XCTestCase {
     
     func testMaxDigitsCount() {
         for _ in 0...10 {
-            var text = textField?.text ?? ""
-            text += "1"
-            
-            textField!.text = text
+            textField?.text?.append("1")
             textField!.textDidChange(textField!)
         }
         
-        if let onlyDigitsText = textField?.text?.replacingOccurrences(of: ".", with: "").replacingOccurrences(of: ",", with: "").replacingOccurrences(of: numberFormatter!.currencySymbol, with: "") {
+        if let onlyDigitsText = textField?.text?.numeralFormat() {
             
             let maxDigits = (textField?.maximumIntegers ?? 7) + 2
             
@@ -51,10 +48,7 @@ class CurrencyTextFieldTests: XCTestCase {
         textField?.maximumIntegers = 4
         
         for _ in 0...10 {
-            var text = textField?.text ?? ""
-            text += "1"
-            
-            textField!.text = text
+            textField?.text?.append("1")
             textField!.textDidChange(textField!)
         }
         
@@ -67,30 +61,44 @@ class CurrencyTextFieldTests: XCTestCase {
     
     func testDeletingDigits() {
         for _ in 0...10 {
-            var text = textField?.text ?? ""
-            text += "1"
-            
-            textField!.text = text
+            textField?.text?.append("1")
             textField!.textDidChange(textField!)
         }
         
-        var currentText = textField?.text
-        currentText?.removeLast()
-        textField!.text = currentText
+        textField!.text!.removeLast()
         textField!.textDidChange(textField!)
         
-        currentText = textField?.text
-        currentText?.removeLast()
-        textField!.text = currentText
+        textField!.text!.removeLast()
         textField!.textDidChange(textField!)
         
-        if let withoutCurrencySymbolText = textField?.text?.numeralFormat() {
-            XCTAssertEqual(withoutCurrencySymbolText, "1111111")
+        if let numeralContent = textField?.text?.numeralFormat() {
+            XCTAssertEqual(numeralContent, "1111111")
         }
     }
     
-    func testPasting() {
+    func testPastingNonNumeralValues() {
+        //without content
+        textField!.text = ",,,,"
+        textField!.textDidChange(textField!)
         
+        XCTAssertEqual(textField!.text, "")
+        
+        //middle of the string
+        textField?.text = (numberFormatter?.currencySymbol ?? "R$") + "3.456,45"
+        textField!.text?.append(",,,,")
+        textField!.textDidChange(textField!)
+        
+        if let comparableText = textField?.text?.removingCurrencySeparators() {
+            XCTAssertEqual(comparableText, (numberFormatter?.currencySymbol ?? "R$") + "3.456,45".removingCurrencySeparators())
+        }
+        
+        //middle of the string
+        textField?.text = (numberFormatter?.currencySymbol ?? "R$") + "3.4,,,.56,45"
+        textField!.textDidChange(textField!)
+        
+        if let comparableText = textField?.text?.removingCurrencySeparators() {
+            XCTAssertEqual(comparableText, (numberFormatter?.currencySymbol ?? "R$") + "3.456,45".removingCurrencySeparators())
+        }
     }
     
     func testInputingNotAtEndIndex() {
@@ -98,10 +106,6 @@ class CurrencyTextFieldTests: XCTestCase {
     }
     
     func testDeletingNotAtEndIndex() {
-        
-    }
-    
-    func testMovingDecimalSeparator() {
         
     }
     

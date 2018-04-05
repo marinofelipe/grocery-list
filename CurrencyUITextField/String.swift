@@ -17,8 +17,12 @@ extension String {
         replaceSubrange(index(endIndex, offsetBy: -2)..<endIndex, with: "." + lastTwoChars)
     }
     
-    //returns only
     func numeralFormat() -> String {
         return replacingOccurrences( of:"[^0-9]", with: "", options: .regularExpression)
+    }
+    
+    func removingCurrencySeparators() -> String {
+        return replacingOccurrences(of: ".", with: "")
+            .replacingOccurrences(of: ",", with: "")
     }
 }
