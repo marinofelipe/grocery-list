@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D53A0E1B2075D2B500DAAF02 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53A0E1A2075D2B400DAAF02 /* String.swift */; };
 		D53D58E0205DEB4F0084E3AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53D58DF205DEB4F0084E3AA /* AppDelegate.swift */; };
 		D53D58E7205DEB4F0084E3AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D53D58E5205DEB4F0084E3AA /* Main.storyboard */; };
 		D53D58E9205DEB4F0084E3AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D53D58E8205DEB4F0084E3AA /* Assets.xcassets */; };
@@ -82,6 +83,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D53A0E1A2075D2B400DAAF02 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		D53D58DC205DEB4F0084E3AA /* GroceryList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroceryList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D53D58DF205DEB4F0084E3AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D53D58E6205DEB4F0084E3AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				D5EE09B8206210BE00E58E76 /* UICurrencyTextFieldTests.swift */,
+				D53A0E1A2075D2B400DAAF02 /* String.swift */,
 				D5EE09BA206210BE00E58E76 /* Info.plist */,
 			);
 			path = CurrencyTextFieldTests;
@@ -488,6 +491,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D53A0E1B2075D2B500DAAF02 /* String.swift in Sources */,
 				D53D58F7205DEB500084E3AA /* GroceryListTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

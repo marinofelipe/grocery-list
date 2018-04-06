@@ -27,27 +27,26 @@ class CurrencyTextFieldTests: XCTestCase {
     }
     
     func testInit() {
-        XCTAssertNotNil(textField)
+        XCTAssertNotNil(textField, "currency text field should not be nil")
     }
     
     func testMaxDigitsCount() {
-        for _ in 0...10 {
+        for _ in 0...20 {
             textField?.text?.append("1")
             textField!.textDidChange(textField!)
         }
         
         if let onlyDigitsText = textField?.text?.numeralFormat() {
-            
             let maxDigits = (textField?.maximumIntegers ?? 7) + 2
             
-            XCTAssertEqual(onlyDigitsText.count, maxDigits)
+            XCTAssertEqual(onlyDigitsText.count, maxDigits, "text count should not be more than maximumIntegerDigits + maximumFractionDigits")
         }
     }
     
     func testCustomMaxDigitsCount() {
         textField?.maximumIntegers = 4
         
-        for _ in 0...10 {
+        for _ in 0...20 {
             textField?.text?.append("1")
             textField!.textDidChange(textField!)
         }
@@ -55,13 +54,23 @@ class CurrencyTextFieldTests: XCTestCase {
         if let onlyDigitsText = textField?.text?.numeralFormat() {
             let maxDigits = (textField?.maximumIntegers ?? 7) + 2
             
-            XCTAssertEqual(onlyDigitsText.count, maxDigits)
+            XCTAssertEqual(onlyDigitsText.count, maxDigits, "text count should not be more than maximumIntegerDigits + maximumFractionDigits")
         }
     }
     
     func testDeletingDigits() {
-        for _ in 0...10 {
-            textField?.text?.append("1")
+        numberFormatter?.locale = Locale(identifier: "en_US")
+        numberFormatter?.minimumFractionDigits = 2
+        numberFormatter?.maximumFractionDigits = 2
+        numberFormatter?.maximumIntegerDigits = 7
+        numberFormatter?.minimumIntegerDigits = 1
+        numberFormatter?.alwaysShowsDecimalSeparator = true
+        numberFormatter?.numberStyle = .currency
+        
+        textField = UICurrencyTextField(numberFormatter: numberFormatter!, frame: CGRect.zero)
+        
+        for _ in 0...9 {
+            textField!.text!.append("1")
             textField!.textDidChange(textField!)
         }
         
@@ -71,9 +80,7 @@ class CurrencyTextFieldTests: XCTestCase {
         textField!.text!.removeLast()
         textField!.textDidChange(textField!)
         
-        if let numeralContent = textField?.text?.numeralFormat() {
-            XCTAssertEqual(numeralContent, "1111111")
-        }
+        XCTAssertEqual(textField?.text, numberFormatter!.currencySymbol + "11,111.11", "deleting digits should keep formating and count as expected")
     }
     
     func testPastingNonNumeralValues() {
