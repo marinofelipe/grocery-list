@@ -9,7 +9,7 @@
 import XCTest
 @testable import UICurrencyTextField
 
-class String: XCTestCase {
+class StringTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -24,5 +24,13 @@ class String: XCTestCase {
     func testNumeralFormat() {
         let nonNumeralString = "*235&Q@6634(355$Q9_-$0_Q8$*64_!@1:'/.,.a"
         XCTAssertEqual(nonNumeralString.numeralFormat(), "2356634355908641", "numeralFormat() should restrict string to only numerals")
+    }
+    
+    func testAddingDecimalSeparator() {
+        
+    }
+    
+    func testRemovingCurrencySeparators() {
+        
     }
 }

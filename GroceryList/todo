@@ -5,9 +5,10 @@ DOING:
         - crash when selecting and deleting including currency symbol
 TODO:
     - CurrencyUITextField
-        - enable all of following modes through enum typing
+        - enable all of following modes through enum type
             - from left to right input
             - decimal pad (maybe free inputing)
+        - rethink convenience init with numberFormatter. numberStyle and alwaysShowsDecimalSeparators might break things
     
 
 // selecting a row will animate price subview

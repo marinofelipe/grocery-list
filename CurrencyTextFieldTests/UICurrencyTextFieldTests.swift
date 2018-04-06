@@ -17,7 +17,15 @@ class CurrencyTextFieldTests: XCTestCase {
     override func setUp() {
         super.setUp()
         textField = UICurrencyTextField(frame: CGRect.zero)
+        
         numberFormatter = NumberFormatter()
+        numberFormatter?.locale = Locale(identifier: "en_US")
+        numberFormatter?.minimumFractionDigits = 2
+        numberFormatter?.maximumFractionDigits = 2
+        numberFormatter?.maximumIntegerDigits = 7
+        numberFormatter?.minimumIntegerDigits = 1
+        numberFormatter?.alwaysShowsDecimalSeparator = true
+        numberFormatter?.numberStyle = .currency
     }
     
     override func tearDown() {
@@ -59,14 +67,6 @@ class CurrencyTextFieldTests: XCTestCase {
     }
     
     func testDeletingDigits() {
-        numberFormatter?.locale = Locale(identifier: "en_US")
-        numberFormatter?.minimumFractionDigits = 2
-        numberFormatter?.maximumFractionDigits = 2
-        numberFormatter?.maximumIntegerDigits = 7
-        numberFormatter?.minimumIntegerDigits = 1
-        numberFormatter?.alwaysShowsDecimalSeparator = true
-        numberFormatter?.numberStyle = .currency
-        
         textField = UICurrencyTextField(numberFormatter: numberFormatter!, frame: CGRect.zero)
         
         for _ in 0...9 {
@@ -109,10 +109,24 @@ class CurrencyTextFieldTests: XCTestCase {
     }
     
     func testInputingNotAtEndIndex() {
+        textField = UICurrencyTextField(numberFormatter: numberFormatter!, frame: CGRect.zero)
         
+        for _ in 0...9 {
+            textField!.text!.append("1")
+            textField!.textDidChange(textField!)
+        }
+        
+        textField!.text!.replaceSubrange(textField!.text!.index(textField!.text!.endIndex, offsetBy: -5)..<textField!.text!.index(textField!.text!.endIndex, offsetBy: -4), with: "15")
+        textField!.textDidChange(textField!)
+        
+        XCTAssertEqual(textField?.text, numberFormatter!.currencySymbol + "1,111,115.11", "deleting digits should keep formating and count as expected")
     }
     
     func testDeletingNotAtEndIndex() {
+        
+    }
+    
+    func testSelectingAndDeletingAll() {
         
     }
     
