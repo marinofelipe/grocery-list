@@ -1,8 +1,7 @@
 DOING:
     - CurrencyUITextField
         - tests
-        - bug when typing not atEndIdex
-        - crash when selecting and deleting including currency symbol
+        - after inputing a value not at end index, cursor should stay where it is
 TODO:
     - CurrencyUITextField
         - enable all of following modes through enum type

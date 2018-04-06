@@ -38,6 +38,7 @@ class CurrencyTextFieldTests: XCTestCase {
         XCTAssertNotNil(textField, "currency text field should not be nil")
     }
     
+    // MARK: max digits
     func testMaxDigitsCount() {
         for _ in 0...20 {
             textField?.text?.append("1")
@@ -66,6 +67,7 @@ class CurrencyTextFieldTests: XCTestCase {
         }
     }
     
+    // MARK: Deletion
     func testDeletingDigits() {
         textField = UICurrencyTextField(numberFormatter: numberFormatter!, frame: CGRect.zero)
         
@@ -83,7 +85,41 @@ class CurrencyTextFieldTests: XCTestCase {
         XCTAssertEqual(textField?.text, numberFormatter!.currencySymbol + "11,111.11", "deleting digits should keep formating and count as expected")
     }
     
+    func testDeletingNotAtEndIndex() {
+        textField = UICurrencyTextField(numberFormatter: numberFormatter!, frame: CGRect.zero)
+        
+        for _ in 0...9 {
+            textField!.text!.append("1")
+            textField!.textDidChange(textField!)
+        }
+        
+        if var text = textField?.text {
+            text.replaceSubrange(text.index(text.endIndex, offsetBy: -5)..<text.index(text.endIndex, offsetBy: -4), with: "")
+            textField?.text = text
+            textField!.textDidChange(textField!)
+            XCTAssertEqual(textField?.text, numberFormatter!.currencySymbol + "111,111.11", "deleting digits should keep formating and count as expected")
+        }
+    }
+    
+    func testSelectingAndDeletingAll() {
+        textField = UICurrencyTextField(numberFormatter: numberFormatter!, frame: CGRect.zero)
+        
+        for _ in 0...9 {
+            textField!.text!.append("1")
+            textField!.textDidChange(textField!)
+        }
+        
+        textField?.text = ""
+        textField!.textDidChange(textField!)
+        
+        XCTAssertNotNil(textField)
+        XCTAssertEqual(textField!.text!.count, 0)
+    }
+    
+    // MARK: input/paste
     func testPastingNonNumeralValues() {
+        textField = UICurrencyTextField(numberFormatter: numberFormatter!, frame: CGRect.zero)
+        
         //without content
         textField!.text = ",,,,"
         textField!.textDidChange(textField!)
@@ -91,20 +127,20 @@ class CurrencyTextFieldTests: XCTestCase {
         XCTAssertEqual(textField!.text, "")
         
         //middle of the string
-        textField?.text = (numberFormatter?.currencySymbol ?? "R$") + "3.456,45"
+        textField?.text = numberFormatter!.currencySymbol + "3.456,45"
         textField!.text?.append(",,,,")
         textField!.textDidChange(textField!)
         
-        if let comparableText = textField?.text?.removingCurrencySeparators() {
-            XCTAssertEqual(comparableText, (numberFormatter?.currencySymbol ?? "R$") + "3.456,45".removingCurrencySeparators())
+        if let comparableText = textField?.text {
+            XCTAssertEqual(comparableText, numberFormatter!.currencySymbol + "3,456.45")
         }
         
         //middle of the string
-        textField?.text = (numberFormatter?.currencySymbol ?? "R$") + "3.4,,,.56,45"
+        textField?.text = numberFormatter!.currencySymbol + "3.4,,,.56,45"
         textField!.textDidChange(textField!)
         
-        if let comparableText = textField?.text?.removingCurrencySeparators() {
-            XCTAssertEqual(comparableText, (numberFormatter?.currencySymbol ?? "R$") + "3.456,45".removingCurrencySeparators())
+        if let comparableText = textField?.text {
+            XCTAssertEqual(comparableText, numberFormatter!.currencySymbol + "3,456.45")
         }
     }
     
@@ -120,14 +156,6 @@ class CurrencyTextFieldTests: XCTestCase {
         textField!.textDidChange(textField!)
         
         XCTAssertEqual(textField?.text, numberFormatter!.currencySymbol + "1,111,115.11", "deleting digits should keep formating and count as expected")
-    }
-    
-    func testDeletingNotAtEndIndex() {
-        
-    }
-    
-    func testSelectingAndDeletingAll() {
-        
     }
     
     func testPerformanceExample() {

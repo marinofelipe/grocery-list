@@ -25,9 +25,4 @@ extension String {
         return replacingOccurrences(of: ".", with: "")
             .replacingOccurrences(of: ",", with: "")
     }
-    
-    func isExtraNumberAtEnd() -> Bool {
-        let charAtSeparatorIndex = self[index(endIndex, offsetBy: -3)..<endIndex]
-        return !"[^0-9]".contains(charAtSeparatorIndex)
-    }
 }
