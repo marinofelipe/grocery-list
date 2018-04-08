@@ -73,6 +73,14 @@ public class UICurrencyTextField: UITextField {
     @objc func textDidChange(_ textField: UICurrencyTextField) {
         if var text = textField.text {
             
+            //set cursor position before upadting text
+            
+            
+            //FIXME: define index based on numberFormat to prevent errors
+            var currentPosition = selectedTextRange?.end
+            let wasAtEnd = currentPosition == endOfDocument
+            var isFirstInput: Bool = false
+            
             guard text.numeralFormat().count > 0 else {
                 textField.text?.removeAll()
                 return
@@ -80,6 +88,7 @@ public class UICurrencyTextField: UITextField {
             
             if text.count == 1 {
                 text = "0.0\(text)"
+                isFirstInput = true
             }
             
             text = text.numeralFormat()
@@ -92,7 +101,20 @@ public class UICurrencyTextField: UITextField {
             text.addDecimalSeparator()
             if let doubleValue = Double(text.replacingOccurrences(of: numberFormatter.currencySymbol, with: "")) {
                 textField.text = numberFormatter.string(from: NSNumber(value: doubleValue))
+                
+                isFirstInput ? currentPosition = endOfDocument : ()
             }
+            
+            setCursor(currentPosition, atEnd: wasAtEnd)
         }
+    }
+    
+    private func setCursor(_ position: UITextPosition?, atEnd: Bool = false) {
+        //TODO: more than one index selected - analyze and treat if necessary
+//        guard let currentPosition = selectedTextRange?.end, currentPosition == selectedTextRange?.end else { return }
+        
+        guard var position = position else { return }
+        atEnd ? position = endOfDocument : ()
+        selectedTextRange = textRange(from: position, to: position)
     }
 }
