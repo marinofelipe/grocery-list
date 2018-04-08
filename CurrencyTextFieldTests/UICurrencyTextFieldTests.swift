@@ -117,6 +117,15 @@ class CurrencyTextFieldTests: XCTestCase {
     }
     
     // MARK: input/paste
+    func testFormatAfterFirstNumber() {
+        textField = UICurrencyTextField(numberFormatter: numberFormatter!, frame: CGRect.zero)
+        
+        textField!.text!.append("1")
+        textField!.textDidChange(textField!)
+        
+        XCTAssertEqual(textField?.text, numberFormatter!.currencySymbol + "0.01", "after first input the text should be correctly formated")
+    }
+    
     func testPastingNonNumeralValues() {
         textField = UICurrencyTextField(numberFormatter: numberFormatter!, frame: CGRect.zero)
         

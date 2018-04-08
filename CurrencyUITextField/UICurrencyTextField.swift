@@ -80,18 +80,18 @@ public class UICurrencyTextField: UITextField {
             
             if text.count == 1 {
                 text = "0.0\(text)"
-            } else {
-                text = text.numeralFormat()
+            }
+            
+            text = text.numeralFormat()
                 
-                let maxDigitsCount = numberFormatter.maximumIntegerDigits + numberFormatter.maximumFractionDigits
-                if text.numeralFormat().count > maxDigitsCount {
-                    text.removeLast()
-                }
-                
-                text.addDecimalSeparator()
-                if let doubleValue = Double(text.replacingOccurrences(of: numberFormatter.currencySymbol, with: "")) {
-                    textField.text = numberFormatter.string(from: NSNumber(value: doubleValue))
-                }
+            let maxDigitsCount = numberFormatter.maximumIntegerDigits + numberFormatter.maximumFractionDigits
+            if text.numeralFormat().count > maxDigitsCount {
+                text.removeLast()
+            }
+            
+            text.addDecimalSeparator()
+            if let doubleValue = Double(text.replacingOccurrences(of: numberFormatter.currencySymbol, with: "")) {
+                textField.text = numberFormatter.string(from: NSNumber(value: doubleValue))
             }
         }
     }
