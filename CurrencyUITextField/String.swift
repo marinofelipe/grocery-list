@@ -21,6 +21,10 @@ extension String {
         return replacingOccurrences(of:"[^0-9]", with: "", options: .regularExpression)
     }
     
+    func separatorsCount() -> Int {
+        return filter({ ".,".contains($0) }).count
+    }
+    
     func removingCurrencySeparators() -> String {
         return replacingOccurrences(of: ".", with: "")
             .replacingOccurrences(of: ",", with: "")

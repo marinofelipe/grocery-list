@@ -11,6 +11,7 @@ import UIKit
 public class UICurrencyTextField: UITextField {
     
     private var numberFormatter = NumberFormatter()
+    private var separatorsCount: Int?
     public var maximumIntegers: Int? {
         didSet {
             guard let maxIntegers = maximumIntegers else { return }
@@ -75,8 +76,6 @@ public class UICurrencyTextField: UITextField {
             
             //set cursor position before upadting text
             
-            
-            //FIXME: define index based on numberFormat to prevent errors
             var currentPosition = selectedTextRange?.end
             let wasAtEnd = currentPosition == endOfDocument
             var isFirstInput: Bool = false
