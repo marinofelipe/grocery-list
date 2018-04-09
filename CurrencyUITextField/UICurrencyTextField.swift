@@ -11,7 +11,7 @@ import UIKit
 public class UICurrencyTextField: UITextField {
     
     private var numberFormatter = NumberFormatter()
-    private var separatorsCount: Int?
+    private var separatorsCount: Int = 0
     public var maximumIntegers: Int? {
         didSet {
             guard let maxIntegers = maximumIntegers else { return }
@@ -72,10 +72,12 @@ public class UICurrencyTextField: UITextField {
 
     // MARK: Action
     @objc func textDidChange(_ textField: UICurrencyTextField) {
+        
+        let previousSeparatorCount = separatorsCount
+        
         if var text = textField.text {
             
             //set cursor position before upadting text
-            
             var currentPosition = selectedTextRange?.end
             let wasAtEnd = currentPosition == endOfDocument
             var isFirstInput: Bool = false
@@ -104,16 +106,24 @@ public class UICurrencyTextField: UITextField {
                 isFirstInput ? currentPosition = endOfDocument : ()
             }
             
-            setCursor(currentPosition, atEnd: wasAtEnd)
+            separatorsCount = textField.text!.separatorsCount()
+            let offset = separatorsCount - previousSeparatorCount
+            setCursor(currentPosition, atEnd: wasAtEnd, offset: offset)
         }
     }
     
-    private func setCursor(_ position: UITextPosition?, atEnd: Bool = false) {
+    private func setCursor(_ currentPosition: UITextPosition?, atEnd: Bool = false, offset: Int) {
         //TODO: more than one index selected - analyze and treat if necessary
 //        guard let currentPosition = selectedTextRange?.end, currentPosition == selectedTextRange?.end else { return }
         
-        guard var position = position else { return }
-        atEnd ? position = endOfDocument : ()
-        selectedTextRange = textRange(from: position, to: position)
+        guard var currentPosition = currentPosition else { return }
+        
+        if atEnd {
+            currentPosition = endOfDocument
+        } else if let position = position(from: currentPosition, offset: offset) {
+            currentPosition = position
+        }
+        
+        selectedTextRange = textRange(from: currentPosition, to: currentPosition)
     }
 }

@@ -167,6 +167,11 @@ class CurrencyTextFieldTests: XCTestCase {
         XCTAssertEqual(textField?.text, numberFormatter!.currencySymbol + "1,111,115.11", "deleting digits should keep formating and count as expected")
     }
     
+    // MARK: Cursor
+    func testCursorPosition() {
+        
+    }
+    
     func testPerformanceExample() {
         self.measure {
             

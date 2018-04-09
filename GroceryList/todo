@@ -1,7 +1,7 @@
 DOING:
     - CurrencyUITextField
-        - tests
-        - after inputing a value not at end index, cursor should stay where it is
+        - cursor refactor
+        - cursor and remaining string tests
 TODO:
     - CurrencyUITextField
         - enable all of following modes through enum type
