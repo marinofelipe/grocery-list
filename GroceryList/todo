@@ -2,6 +2,7 @@ DOING:
     - CurrencyUITextField
         - cursor refactor
         - cursor and remaining string tests
+        - cursor glitches when before reduced/added separators
 TODO:
     - CurrencyUITextField
         - enable all of following modes through enum type
