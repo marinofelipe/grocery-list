@@ -4,6 +4,5 @@ coverage_service: coveralls
 xcodeproj: GroceryList.xcodeproj
 # workspace: GroceryList.xcworkspace
 scheme: GroceryList
-# source_directory: ShowMeTheGames/
 ignore: 
   -  GroceryList/AppDelegate.swift
