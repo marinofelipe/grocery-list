@@ -8,8 +8,15 @@
 
 import UIKit
 
+protocol CurrencyString {
+    mutating func addDecimalSeparator()
+    func numeralFormat() -> String
+    func separatorsCount() -> Int
+    func removingCurrencySeparators() -> String
+}
+
 //String Currency Extension
-extension String {
+extension String: CurrencyString {
     
     //moves separator one character to the right. Keeps currency formated
     mutating func addDecimalSeparator() {
@@ -21,6 +28,7 @@ extension String {
         return replacingOccurrences(of:"[^0-9]", with: "", options: .regularExpression)
     }
     
+    // cursor and separator logic
     func separatorsCount() -> Int {
         return filter({ ".,".contains($0) }).count
     }

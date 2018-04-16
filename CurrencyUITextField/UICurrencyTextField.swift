@@ -11,13 +11,15 @@ import UIKit
 public class UICurrencyTextField: UITextField {
     
     private var numberFormatter = NumberFormatter()
-    private var separatorsCount: Int = 0
     public var maximumIntegers: Int? {
         didSet {
             guard let maxIntegers = maximumIntegers else { return }
             numberFormatter.maximumIntegerDigits = maxIntegers
         }
     }
+    
+    //Cursor
+    var cursorOffsetFromEnd: Int = 0
 
     /*
      // Only override draw() if you perform custom drawing.
@@ -73,14 +75,10 @@ public class UICurrencyTextField: UITextField {
     // MARK: Action
     @objc func textDidChange(_ textField: UICurrencyTextField) {
         
-        let previousSeparatorCount = separatorsCount
-        
         if var text = textField.text {
             
-            //set cursor position before upadting text
-            var currentPosition = selectedTextRange?.end
-            let wasAtEnd = currentPosition == endOfDocument
             var isFirstInput: Bool = false
+            cursorOffsetFromEnd = offset(from: endOfDocument, to: selectedTextRange!.end)
             
             guard text.numeralFormat().count > 0 else {
                 textField.text?.removeAll()
@@ -102,28 +100,20 @@ public class UICurrencyTextField: UITextField {
             text.addDecimalSeparator()
             if let doubleValue = Double(text.replacingOccurrences(of: numberFormatter.currencySymbol, with: "")) {
                 textField.text = numberFormatter.string(from: NSNumber(value: doubleValue))
-                
-                isFirstInput ? currentPosition = endOfDocument : ()
             }
             
-            separatorsCount = textField.text!.separatorsCount()
-            let offset = separatorsCount - previousSeparatorCount
-            setCursor(currentPosition, atEnd: wasAtEnd, offset: offset)
+            isFirstInput ? cursorOffsetFromEnd = 0 : ()
+            updateSelectedTextRange()
         }
     }
+}
+
+// MARK: Update selected text range
+extension UICurrencyTextField {
     
-    private func setCursor(_ currentPosition: UITextPosition?, atEnd: Bool = false, offset: Int) {
-        //TODO: more than one index selected - analyze and treat if necessary
-//        guard let currentPosition = selectedTextRange?.end, currentPosition == selectedTextRange?.end else { return }
-        
-        guard var currentPosition = currentPosition else { return }
-        
-        if atEnd {
-            currentPosition = endOfDocument
-        } else if let position = position(from: currentPosition, offset: offset) {
-            currentPosition = position
+    func updateSelectedTextRange() {
+        if let updatedCursorPosition = position(from: endOfDocument, offset: cursorOffsetFromEnd) {
+            selectedTextRange = textRange(from: updatedCursorPosition, to: updatedCursorPosition)
         }
-        
-        selectedTextRange = textRange(from: currentPosition, to: currentPosition)
     }
 }
