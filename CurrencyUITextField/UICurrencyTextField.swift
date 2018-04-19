@@ -13,6 +13,7 @@ public class UICurrencyTextField: UITextField {
     private var numberFormatter = NumberFormatter()
     
     // MARK: Open vars
+    public var hasAutoclear: Bool = false
     public var maximumIntegers: Int? {
         didSet {
             guard let maxIntegers = maximumIntegers else { return }
@@ -73,6 +74,7 @@ public class UICurrencyTextField: UITextField {
     // MARK: Text Did Change target
     private func addTarget() {
         addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        addTarget(self, action: #selector(didEndEditing), for: .editingDidEnd)
     }
 
     // MARK: Text Events
@@ -107,6 +109,12 @@ public class UICurrencyTextField: UITextField {
             
             isFirstInput ? cursorOffsetFromEnd = 0 : ()
             updateSelectedTextRange()
+        }
+    }
+    
+    @objc func didEndEditing(_ textField: UICurrencyTextField) {
+        if let text = textField.text, text.numeralFormat().representsZero() {
+            textField.text = ""
         }
     }
 }

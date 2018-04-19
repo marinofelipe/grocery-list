@@ -27,7 +27,11 @@ extension String: CurrencyString {
         return replacingOccurrences(of:"[^0-9]", with: "", options: .regularExpression)
     }
     
-    // cursor and separator logic
+    func representsZero() -> Bool {
+        return replacingOccurrences(of: "0", with: "").count == 0
+    }
+    
+    
     func removingCurrencySeparators() -> String {
         return replacingOccurrences(of: ".", with: "")
             .replacingOccurrences(of: ",", with: "")
