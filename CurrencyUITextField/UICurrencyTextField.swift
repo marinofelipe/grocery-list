@@ -11,6 +11,8 @@ import UIKit
 public class UICurrencyTextField: UITextField {
     
     private var numberFormatter = NumberFormatter()
+    
+    // MARK: Open vars
     public var maximumIntegers: Int? {
         didSet {
             guard let maxIntegers = maximumIntegers else { return }
@@ -29,6 +31,7 @@ public class UICurrencyTextField: UITextField {
      }
      */
     
+    // MARK: Init
     public convenience init(numberFormatter: NumberFormatter, frame: CGRect) {
         self.init(frame: frame)
         self.numberFormatter = numberFormatter
@@ -72,7 +75,7 @@ public class UICurrencyTextField: UITextField {
         addTarget(self, action: #selector(textDidChange), for: .editingChanged)
     }
 
-    // MARK: Action
+    // MARK: Text Events
     @objc func textDidChange(_ textField: UICurrencyTextField) {
         
         if var text = textField.text {

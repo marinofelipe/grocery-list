@@ -11,7 +11,6 @@ import UIKit
 protocol CurrencyString {
     mutating func addDecimalSeparator()
     func numeralFormat() -> String
-    func separatorsCount() -> Int
     func removingCurrencySeparators() -> String
 }
 
@@ -29,10 +28,6 @@ extension String: CurrencyString {
     }
     
     // cursor and separator logic
-    func separatorsCount() -> Int {
-        return filter({ ".,".contains($0) }).count
-    }
-    
     func removingCurrencySeparators() -> String {
         return replacingOccurrences(of: ".", with: "")
             .replacingOccurrences(of: ",", with: "")

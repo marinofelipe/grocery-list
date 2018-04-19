@@ -26,12 +26,6 @@ class StringTests: XCTestCase {
         XCTAssertEqual(nonNumeralString.numeralFormat(), "2356634355908641", "numeralFormat() should restrict string to only numerals")
     }
     
-    func testSeparatorsCount() {
-        let currencyString = "R$4,756.99"
-        
-        XCTAssertEqual(currencyString.separatorsCount(), 2, "separators count function does not return correct value")
-    }
-    
     func testAddingDecimalSeparator() {
         
     }
