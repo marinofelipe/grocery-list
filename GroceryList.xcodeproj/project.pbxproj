@@ -159,8 +159,8 @@
 				D53D58DE205DEB4F0084E3AA /* GroceryList */,
 				D53D58F5205DEB500084E3AA /* GroceryListTests */,
 				D53D5900205DEB500084E3AA /* GroceryListUITests */,
-				D5EE09AA206210BD00E58E76 /* CurrencyUITextField */,
-				D5EE09B7206210BE00E58E76 /* CurrencyTextFieldTests */,
+				D5EE09AA206210BD00E58E76 /* UICurrencyTextField */,
+				D5EE09B7206210BE00E58E76 /* UICurrencyTextFieldTests */,
 				D53D58DD205DEB4F0084E3AA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -245,7 +245,7 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		D5EE09AA206210BD00E58E76 /* CurrencyUITextField */ = {
+		D5EE09AA206210BD00E58E76 /* UICurrencyTextField */ = {
 			isa = PBXGroup;
 			children = (
 				D5EE09AB206210BE00E58E76 /* UICurrencyTextField.h */,
@@ -253,17 +253,17 @@
 				D5EE09C7206213B900E58E76 /* UICurrencyTextField.swift */,
 				D559FBE82073441B004C8CBC /* String.swift */,
 			);
-			path = CurrencyUITextField;
+			path = UICurrencyTextField;
 			sourceTree = "<group>";
 		};
-		D5EE09B7206210BE00E58E76 /* CurrencyTextFieldTests */ = {
+		D5EE09B7206210BE00E58E76 /* UICurrencyTextFieldTests */ = {
 			isa = PBXGroup;
 			children = (
 				D5EE09B8206210BE00E58E76 /* UICurrencyTextFieldTests.swift */,
 				D53A0E1A2075D2B400DAAF02 /* StringTests.swift */,
 				D5EE09BA206210BE00E58E76 /* Info.plist */,
 			);
-			path = CurrencyTextFieldTests;
+			path = UICurrencyTextFieldTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
