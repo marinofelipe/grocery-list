@@ -1,0 +1,6 @@
+framework module UICurrencyTextField {
+  umbrella header "UICurrencyTextField-umbrella.h"
+
+  export *
+  module * { export * }
+}
