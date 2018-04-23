@@ -7,27 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D53A0E1B2075D2B500DAAF02 /* StringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53A0E1A2075D2B400DAAF02 /* StringTests.swift */; };
 		D53D58E0205DEB4F0084E3AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53D58DF205DEB4F0084E3AA /* AppDelegate.swift */; };
 		D53D58E7205DEB4F0084E3AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D53D58E5205DEB4F0084E3AA /* Main.storyboard */; };
 		D53D58E9205DEB4F0084E3AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D53D58E8205DEB4F0084E3AA /* Assets.xcassets */; };
 		D53D58EC205DEB4F0084E3AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D53D58EA205DEB4F0084E3AA /* LaunchScreen.storyboard */; };
 		D53D58F7205DEB500084E3AA /* GroceryListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53D58F6205DEB500084E3AA /* GroceryListTests.swift */; };
 		D53D5902205DEB500084E3AA /* GroceryListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53D5901205DEB500084E3AA /* GroceryListUITests.swift */; };
-		D559FBE92073441B004C8CBC /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = D559FBE82073441B004C8CBC /* String.swift */; };
-		D559FBEA2073452B004C8CBC /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = D559FBE82073441B004C8CBC /* String.swift */; };
 		D5EE0999205F474700E58E76 /* todo in Resources */ = {isa = PBXBuildFile; fileRef = D5EE0998205F474700E58E76 /* todo */; };
 		D5EE099B2062018000E58E76 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EE099A2062018000E58E76 /* ListViewModel.swift */; };
 		D5EE099D206201AC00E58E76 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EE099C206201AC00E58E76 /* ListViewController.swift */; };
 		D5EE099F2062021200E58E76 /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EE099E2062021200E58E76 /* ItemCollectionViewCell.swift */; };
 		D5EE09A12062025A00E58E76 /* ItemCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EE09A02062025A00E58E76 /* ItemCellViewModel.swift */; };
 		D5EE09A32062027800E58E76 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EE09A22062027800E58E76 /* Constants.swift */; };
-		D5EE09B2206210BE00E58E76 /* UICurrencyTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5EE09A9206210BD00E58E76 /* UICurrencyTextField.framework */; };
-		D5EE09B9206210BE00E58E76 /* UICurrencyTextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EE09B8206210BE00E58E76 /* UICurrencyTextFieldTests.swift */; };
-		D5EE09BB206210BE00E58E76 /* UICurrencyTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = D5EE09AB206210BE00E58E76 /* UICurrencyTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D5EE09BE206210BE00E58E76 /* UICurrencyTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5EE09A9206210BD00E58E76 /* UICurrencyTextField.framework */; };
-		D5EE09BF206210BE00E58E76 /* UICurrencyTextField.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D5EE09A9206210BD00E58E76 /* UICurrencyTextField.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D5EE09C8206213B900E58E76 /* UICurrencyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EE09C7206213B900E58E76 /* UICurrencyTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,27 +36,6 @@
 			remoteGlobalIDString = D53D58DB205DEB4F0084E3AA;
 			remoteInfo = GroceryList;
 		};
-		D5EE09B3206210BE00E58E76 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D53D58D4205DEB4F0084E3AA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D5EE09A8206210BD00E58E76;
-			remoteInfo = CurrencyTextField;
-		};
-		D5EE09B5206210BE00E58E76 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D53D58D4205DEB4F0084E3AA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D53D58DB205DEB4F0084E3AA;
-			remoteInfo = GroceryList;
-		};
-		D5EE09BC206210BE00E58E76 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D53D58D4205DEB4F0084E3AA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D5EE09A8206210BD00E58E76;
-			remoteInfo = CurrencyTextField;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -75,7 +45,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D5EE09BF206210BE00E58E76 /* UICurrencyTextField.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -83,7 +52,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		D53A0E1A2075D2B400DAAF02 /* StringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringTests.swift; sourceTree = "<group>"; };
 		D53D58DC205DEB4F0084E3AA /* GroceryList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroceryList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D53D58DF205DEB4F0084E3AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D53D58E6205DEB4F0084E3AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -96,20 +64,12 @@
 		D53D58FD205DEB500084E3AA /* GroceryListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GroceryListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D53D5901205DEB500084E3AA /* GroceryListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryListUITests.swift; sourceTree = "<group>"; };
 		D53D5903205DEB500084E3AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D559FBE82073441B004C8CBC /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		D5EE0998205F474700E58E76 /* todo */ = {isa = PBXFileReference; lastKnownFileType = text; path = todo; sourceTree = "<group>"; };
 		D5EE099A2062018000E58E76 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		D5EE099C206201AC00E58E76 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		D5EE099E2062021200E58E76 /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		D5EE09A02062025A00E58E76 /* ItemCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCellViewModel.swift; sourceTree = "<group>"; };
 		D5EE09A22062027800E58E76 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		D5EE09A9206210BD00E58E76 /* UICurrencyTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UICurrencyTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D5EE09AB206210BE00E58E76 /* UICurrencyTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UICurrencyTextField.h; sourceTree = "<group>"; };
-		D5EE09AC206210BE00E58E76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D5EE09B1206210BE00E58E76 /* UICurrencyTextFieldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UICurrencyTextFieldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D5EE09B8206210BE00E58E76 /* UICurrencyTextFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICurrencyTextFieldTests.swift; sourceTree = "<group>"; };
-		D5EE09BA206210BE00E58E76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D5EE09C7206213B900E58E76 /* UICurrencyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICurrencyTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +77,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5EE09BE206210BE00E58E76 /* UICurrencyTextField.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,21 +94,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D5EE09A5206210BD00E58E76 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D5EE09AE206210BE00E58E76 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D5EE09B2206210BE00E58E76 /* UICurrencyTextField.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -159,8 +103,6 @@
 				D53D58DE205DEB4F0084E3AA /* GroceryList */,
 				D53D58F5205DEB500084E3AA /* GroceryListTests */,
 				D53D5900205DEB500084E3AA /* GroceryListUITests */,
-				D5EE09AA206210BD00E58E76 /* UICurrencyTextField */,
-				D5EE09B7206210BE00E58E76 /* UICurrencyTextFieldTests */,
 				D53D58DD205DEB4F0084E3AA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -171,8 +113,6 @@
 				D53D58DC205DEB4F0084E3AA /* GroceryList.app */,
 				D53D58F2205DEB4F0084E3AA /* GroceryListTests.xctest */,
 				D53D58FD205DEB500084E3AA /* GroceryListUITests.xctest */,
-				D5EE09A9206210BD00E58E76 /* UICurrencyTextField.framework */,
-				D5EE09B1206210BE00E58E76 /* UICurrencyTextFieldTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -245,39 +185,7 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		D5EE09AA206210BD00E58E76 /* UICurrencyTextField */ = {
-			isa = PBXGroup;
-			children = (
-				D5EE09AB206210BE00E58E76 /* UICurrencyTextField.h */,
-				D5EE09AC206210BE00E58E76 /* Info.plist */,
-				D5EE09C7206213B900E58E76 /* UICurrencyTextField.swift */,
-				D559FBE82073441B004C8CBC /* String.swift */,
-			);
-			path = UICurrencyTextField;
-			sourceTree = "<group>";
-		};
-		D5EE09B7206210BE00E58E76 /* UICurrencyTextFieldTests */ = {
-			isa = PBXGroup;
-			children = (
-				D5EE09B8206210BE00E58E76 /* UICurrencyTextFieldTests.swift */,
-				D53A0E1A2075D2B400DAAF02 /* StringTests.swift */,
-				D5EE09BA206210BE00E58E76 /* Info.plist */,
-			);
-			path = UICurrencyTextFieldTests;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
-
-/* Begin PBXHeadersBuildPhase section */
-		D5EE09A6206210BD00E58E76 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D5EE09BB206210BE00E58E76 /* UICurrencyTextField.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		D53D58DB205DEB4F0084E3AA /* GroceryList */ = {
@@ -292,7 +200,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				D5EE09BD206210BE00E58E76 /* PBXTargetDependency */,
 			);
 			name = GroceryList;
 			productName = GroceryList;
@@ -335,43 +242,6 @@
 			productReference = D53D58FD205DEB500084E3AA /* GroceryListUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		D5EE09A8206210BD00E58E76 /* UICurrencyTextField */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D5EE09C0206210BE00E58E76 /* Build configuration list for PBXNativeTarget "UICurrencyTextField" */;
-			buildPhases = (
-				D5EE09A4206210BD00E58E76 /* Sources */,
-				D5EE09A5206210BD00E58E76 /* Frameworks */,
-				D5EE09A6206210BD00E58E76 /* Headers */,
-				D5EE09A7206210BD00E58E76 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = UICurrencyTextField;
-			productName = CurrencyTextField;
-			productReference = D5EE09A9206210BD00E58E76 /* UICurrencyTextField.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		D5EE09B0206210BE00E58E76 /* UICurrencyTextFieldTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D5EE09C4206210BE00E58E76 /* Build configuration list for PBXNativeTarget "UICurrencyTextFieldTests" */;
-			buildPhases = (
-				D5EE09AD206210BE00E58E76 /* Sources */,
-				D5EE09AE206210BE00E58E76 /* Frameworks */,
-				D5EE09AF206210BE00E58E76 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D5EE09B4206210BE00E58E76 /* PBXTargetDependency */,
-				D5EE09B6206210BE00E58E76 /* PBXTargetDependency */,
-			);
-			name = UICurrencyTextFieldTests;
-			productName = CurrencyTextFieldTests;
-			productReference = D5EE09B1206210BE00E58E76 /* UICurrencyTextFieldTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -396,16 +266,6 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = D53D58DB205DEB4F0084E3AA;
 					};
-					D5EE09A8206210BD00E58E76 = {
-						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 0920;
-						ProvisioningStyle = Automatic;
-					};
-					D5EE09B0206210BE00E58E76 = {
-						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
-						TestTargetID = D53D58DB205DEB4F0084E3AA;
-					};
 				};
 			};
 			buildConfigurationList = D53D58D7205DEB4F0084E3AA /* Build configuration list for PBXProject "GroceryList" */;
@@ -424,8 +284,6 @@
 				D53D58DB205DEB4F0084E3AA /* GroceryList */,
 				D53D58F1205DEB4F0084E3AA /* GroceryListTests */,
 				D53D58FC205DEB500084E3AA /* GroceryListUITests */,
-				D5EE09A8206210BD00E58E76 /* UICurrencyTextField */,
-				D5EE09B0206210BE00E58E76 /* UICurrencyTextFieldTests */,
 			);
 		};
 /* End PBXProject section */
@@ -456,20 +314,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D5EE09A7206210BD00E58E76 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D5EE09AF206210BE00E58E76 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -481,7 +325,6 @@
 				D5EE099B2062018000E58E76 /* ListViewModel.swift in Sources */,
 				D5EE099F2062021200E58E76 /* ItemCollectionViewCell.swift in Sources */,
 				D5EE099D206201AC00E58E76 /* ListViewController.swift in Sources */,
-				D559FBE92073441B004C8CBC /* String.swift in Sources */,
 				D5EE09A12062025A00E58E76 /* ItemCellViewModel.swift in Sources */,
 				D5EE09A32062027800E58E76 /* Constants.swift in Sources */,
 			);
@@ -491,7 +334,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D53A0E1B2075D2B500DAAF02 /* StringTests.swift in Sources */,
 				D53D58F7205DEB500084E3AA /* GroceryListTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -501,23 +343,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D53D5902205DEB500084E3AA /* GroceryListUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D5EE09A4206210BD00E58E76 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D559FBEA2073452B004C8CBC /* String.swift in Sources */,
-				D5EE09C8206213B900E58E76 /* UICurrencyTextField.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D5EE09AD206210BE00E58E76 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D5EE09B9206210BE00E58E76 /* UICurrencyTextFieldTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,21 +358,6 @@
 			isa = PBXTargetDependency;
 			target = D53D58DB205DEB4F0084E3AA /* GroceryList */;
 			targetProxy = D53D58FE205DEB500084E3AA /* PBXContainerItemProxy */;
-		};
-		D5EE09B4206210BE00E58E76 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D5EE09A8206210BD00E58E76 /* UICurrencyTextField */;
-			targetProxy = D5EE09B3206210BE00E58E76 /* PBXContainerItemProxy */;
-		};
-		D5EE09B6206210BE00E58E76 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D53D58DB205DEB4F0084E3AA /* GroceryList */;
-			targetProxy = D5EE09B5206210BE00E58E76 /* PBXContainerItemProxy */;
-		};
-		D5EE09BD206210BE00E58E76 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D5EE09A8206210BD00E58E76 /* UICurrencyTextField */;
-			targetProxy = D5EE09BC206210BE00E58E76 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -687,7 +497,6 @@
 		D53D5907205DEB500084E3AA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X9MK4PBNUW;
@@ -704,7 +513,6 @@
 		D53D5908205DEB500084E3AA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X9MK4PBNUW;
@@ -784,91 +592,6 @@
 			};
 			name = Release;
 		};
-		D5EE09C1206210BE00E58E76 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = X9MK4PBNUW;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = CurrencyUITextField/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.felipemarino.CurrencyTextField;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		D5EE09C2206210BE00E58E76 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = X9MK4PBNUW;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = CurrencyUITextField/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.felipemarino.CurrencyTextField;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		D5EE09C5206210BE00E58E76 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = X9MK4PBNUW;
-				INFOPLIST_FILE = CurrencyTextFieldTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.felipemarino.CurrencyTextFieldTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GroceryList.app/GroceryList";
-			};
-			name = Debug;
-		};
-		D5EE09C6206210BE00E58E76 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = X9MK4PBNUW;
-				INFOPLIST_FILE = CurrencyTextFieldTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.felipemarino.CurrencyTextFieldTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GroceryList.app/GroceryList";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -904,24 +627,6 @@
 			buildConfigurations = (
 				D53D590D205DEB500084E3AA /* Debug */,
 				D53D590E205DEB500084E3AA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D5EE09C0206210BE00E58E76 /* Build configuration list for PBXNativeTarget "UICurrencyTextField" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D5EE09C1206210BE00E58E76 /* Debug */,
-				D5EE09C2206210BE00E58E76 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D5EE09C4206210BE00E58E76 /* Build configuration list for PBXNativeTarget "UICurrencyTextFieldTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D5EE09C5206210BE00E58E76 /* Debug */,
-				D5EE09C6206210BE00E58E76 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

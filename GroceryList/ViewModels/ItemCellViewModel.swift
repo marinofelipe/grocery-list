@@ -29,7 +29,6 @@ class ItemCellViewModel: CellViewModel {
             
             itemCell.nameLabel.text = item
             itemCell.priceLabel.text = price
-            itemCell.textField.maximumIntegers = 4
             
             itemCell.contentView.backgroundColor = mockedColors[Int(arc4random_uniform(UInt32(mockedColors.count)))]
             
