@@ -12,8 +12,8 @@ platform :ios do
       )
 
       slather(
-        workspace: "GroceryList.xcworkspace", scheme: "GroceryList",
-        ignore: ["GroceryList/AppDelegate.swift"]
+        proj: "GroceryList.xcodeproj", workspace: "GroceryList.xcworkspace", scheme: "GroceryList", 
+        travis: true, coveralls: true, ignore: ["GroceryList/AppDelegate.swift"]
       )
   end
 
