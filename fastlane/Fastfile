@@ -1,19 +1,20 @@
-# This file contains the fastlane.tools configuration
-# You can find the documentation at https://docs.fastlane.tools
-#
-# For a list of all available actions, check out
-#
-#     https://docs.fastlane.tools/actions
-#
-
-# Uncomment the line if you want fastlane to automatically update itself
-# update_fastlane
+update_fastlane
 
 default_platform(:ios)
 
 platform :ios do
-  desc "Description of what the lane does"
-  lane :custom_lane do
-    # add actions here: https://docs.fastlane.tools/actions
+  
+  desc "Run test target and slather"
+  lane :test do
+  	  scan(
+        clean: true, code_coverage: true, scheme: "GroceryList", 
+        devices: ["iPhone SE", "iPhone 8"], skip_slack: true
+      )
+
+      slather(
+        workspace: "GroceryList.xcworkspace", scheme: "GroceryList",
+        ignore: ["GroceryList/AppDelegate.swift"]
+      )
   end
+
 end
