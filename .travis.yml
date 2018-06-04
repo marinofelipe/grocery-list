@@ -8,7 +8,7 @@ before_install:
 - bundle install
 
 - pod repo update --silent
-# - pod install
+- pod install
 
 script:
 - fastlane test
