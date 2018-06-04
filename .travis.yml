@@ -1,7 +1,3 @@
-# references:
-# * http://www.objc.io/issue-6/travis-ci.html
-# * https://github.com/supermarin/xcpretty#usage
-
 osx_image: xcode9.3
 language: objective-c
 
@@ -19,12 +15,11 @@ branches:
 before_install:
 - rvm use $RVM_RUBY_VERSION
 - gem install cocoapods # Since Travis is not always on latest version
-- sudo gem install fastlane --version 2.84.0 --no-document
+- sudo gem install fastlane --no-document
 - bundle install
 
-# install:
 - pod repo update --silent
 # - pod install
 
 script:
-- fastlane testLane
+- fastlane test
