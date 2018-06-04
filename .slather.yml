@@ -1,8 +1,0 @@
-# .slather.yml
-ci_service: travis_ci
-coverage_service: coveralls
-xcodeproj: GroceryList.xcodeproj
-# workspace: GroceryList.xcworkspace
-scheme: GroceryList
-ignore: 
-  -  GroceryList/AppDelegate.swift

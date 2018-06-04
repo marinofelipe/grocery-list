@@ -1,0 +1,20 @@
+update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+  
+  desc "Run test target and slather"
+  lane :test do
+  	  scan(
+        clean: true, code_coverage: true, scheme: "GroceryList", 
+        devices: ["iPhone SE", "iPhone 8"], skip_slack: true
+      )
+
+      slather(
+        proj: "GroceryList.xcodeproj", workspace: "GroceryList.xcworkspace", scheme: "GroceryList", 
+        travis: true, coveralls: true, ignore: ["GroceryList/AppDelegate.swift"]
+      )
+  end
+
+end
